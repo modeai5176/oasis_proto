@@ -20,8 +20,13 @@ export default function ContributePage() {
             muted
             playsInline
             preload="auto"
+            webkit-playsinline="true"
+            x5-playsinline="true"
+            x5-video-player-type="h5"
+            x5-video-player-fullscreen="false"
             className="object-cover w-full h-full"
             poster="/images/video-poster.jpg"
+            style={{ objectFit: 'cover' }}
           >
             <source src="/desert.mp4" type="video/mp4" />
             Your browser does not support the video tag.
@@ -104,73 +109,77 @@ export default function ContributePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* PayPal */}
-            <Card className="border-gray-200 hover:shadow-lg transition-shadow text-center">
-              <CardHeader className="text-center">
+            <Card className="border-gray-200 hover:shadow-lg transition-shadow text-center flex flex-col h-full">
+              <CardHeader className="text-center flex-shrink-0">
                 <div className="w-16 h-16 bg-[#1C3163]/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <CreditCard className="h-8 w-8 text-[#1C3163]" />
                 </div>
-                <CardTitle className="text-gray-900">PayPal</CardTitle>
-                <CardDescription className="text-gray-600">
+                <CardTitle className="text-gray-900 text-xl mb-2">PayPal</CardTitle>
+                <CardDescription className="text-gray-600 text-sm leading-relaxed">
                   Secure online donations with credit card or PayPal account
                 </CardDescription>
               </CardHeader>
-              <CardContent className="space-y-4 text-center">
-                <div className="grid grid-cols-2 gap-2">
-                  <Button variant="outline" className="border-[#1C3163] text-[#1C3163] hover:bg-[#1C3163]/10 bg-transparent">
+              <CardContent className="flex flex-col flex-grow space-y-4 text-center">
+                <div className="grid grid-cols-2 gap-2 mb-4">
+                  <Button variant="outline" className="border-[#1C3163] text-[#1C3163] hover:bg-[#1C3163]/10 bg-transparent py-2">
                     $25
                   </Button>
-                  <Button variant="outline" className="border-[#1C3163] text-[#1C3163] hover:bg-[#1C3163]/10 bg-transparent">
+                  <Button variant="outline" className="border-[#1C3163] text-[#1C3163] hover:bg-[#1C3163]/10 bg-transparent py-2">
                     $50
                   </Button>
-                  <Button variant="outline" className="border-[#1C3163] text-[#1C3163] hover:bg-[#1C3163]/10 bg-transparent">
+                  <Button variant="outline" className="border-[#1C3163] text-[#1C3163] hover:bg-[#1C3163]/10 bg-transparent py-2">
                     $75
                   </Button>
-                  <Button variant="outline" className="border-[#1C3163] text-[#1C3163] hover:bg-[#1C3163]/10 bg-transparent">
+                  <Button variant="outline" className="border-[#1C3163] text-[#1C3163] hover:bg-[#1C3163]/10 bg-transparent py-2">
                     $100
                   </Button>
                 </div>
-                <Button className="w-full bg-[#1C3163] hover:bg-[#1C3163]/90 text-white">Donate with PayPal</Button>
-                <p className="text-xs text-gray-500 text-center">Secure payment processing • Tax-deductible</p>
+                <div className="mt-auto space-y-3">
+                  <Button className="w-full bg-[#1C3163] hover:bg-[#1C3163]/90 text-white py-3">Donate with PayPal</Button>
+                  <p className="text-xs text-gray-500">Secure payment processing • Tax-deductible</p>
+                </div>
               </CardContent>
             </Card>
 
             {/* M-Pesa */}
-            <Card className="border-gray-200 hover:shadow-lg transition-shadow text-center">
-              <CardHeader className="text-center">
+            <Card className="border-gray-200 hover:shadow-lg transition-shadow text-center flex flex-col h-full">
+              <CardHeader className="text-center flex-shrink-0">
                 <div className="w-16 h-16 bg-[#1C3163]/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Smartphone className="h-8 w-8 text-[#1C3163]" />
                 </div>
-                <CardTitle className="text-gray-900">M-Pesa</CardTitle>
-                <CardDescription className="text-gray-600">
+                <CardTitle className="text-gray-900 text-xl mb-2">M-Pesa</CardTitle>
+                <CardDescription className="text-gray-600 text-sm leading-relaxed">
                   Mobile money transfer for supporters in Kenya and East Africa
                 </CardDescription>
               </CardHeader>
-              <CardContent className="space-y-4 text-center">
-                <div className="bg-[#1C3163]/10 p-4 rounded-lg text-center">
+              <CardContent className="flex flex-col flex-grow space-y-4 text-center">
+                <div className="bg-[#1C3163]/10 p-4 rounded-lg text-center mb-4">
                   <p className="text-sm text-[#1C3163] font-medium mb-2">Send to:</p>
                   <p className="text-lg font-bold text-[#1C3163]">Paybill: 247247</p>
                   <p className="text-sm text-[#1C3163]">Account: OASIS2024</p>
                 </div>
-                <Button className="w-full bg-[#1C3163] hover:bg-[#1C3163]/90 text-white">Send via M-Pesa</Button>
-                <p className="text-xs text-gray-500 text-center">
-                  Available in Kenya, Tanzania, Uganda • Instant transfer
-                </p>
+                <div className="mt-auto space-y-3">
+                  <Button className="w-full bg-[#1C3163] hover:bg-[#1C3163]/90 text-white py-3">Send via M-Pesa</Button>
+                  <p className="text-xs text-gray-500">
+                    Available in Kenya, Tanzania, Uganda • Instant transfer
+                  </p>
+                </div>
               </CardContent>
             </Card>
 
             {/* GoFundMe */}
-            <Card className="border-gray-200 hover:shadow-lg transition-shadow text-center">
-              <CardHeader className="text-center">
+            <Card className="border-gray-200 hover:shadow-lg transition-shadow text-center flex flex-col h-full">
+              <CardHeader className="text-center flex-shrink-0">
                 <div className="w-16 h-16 bg-[#D6B585]/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Globe className="h-8 w-8 text-[#D6B585]" />
                 </div>
-                <CardTitle className="text-gray-900">GoFundMe</CardTitle>
-                <CardDescription className="text-gray-600">
+                <CardTitle className="text-gray-900 text-xl mb-2">GoFundMe</CardTitle>
+                <CardDescription className="text-gray-600 text-sm leading-relaxed">
                   Join our community fundraising campaign and share with friends
                 </CardDescription>
               </CardHeader>
-              <CardContent className="space-y-4 text-center">
-                <div className="bg-[#D6B585]/10 p-4 rounded-lg text-center">
+              <CardContent className="flex flex-col flex-grow space-y-4 text-center">
+                <div className="bg-[#D6B585]/10 p-4 rounded-lg text-center mb-4">
                   <div className="flex justify-between items-center mb-2">
                     <span className="text-sm text-[#D6B585]">Goal Progress</span>
                     <span className="text-sm font-medium text-[#D6B585]">68%</span>
@@ -180,8 +189,10 @@ export default function ContributePage() {
                   </div>
                   <p className="text-xs text-[#D6B585] mt-2">$34,000 raised of $50,000 goal</p>
                 </div>
-                <Button className="w-full bg-[#D6B585] hover:bg-[#D6B585]/90 text-[#00071B]">Donate on GoFundMe</Button>
-                <p className="text-xs text-gray-500 text-center">Social sharing • Community updates • Global reach</p>
+                <div className="mt-auto space-y-3">
+                  <Button className="w-full bg-[#D6B585] hover:bg-[#D6B585]/90 text-[#00071B] py-3">Donate on GoFundMe</Button>
+                  <p className="text-xs text-gray-500">Social sharing • Community updates • Global reach</p>
+                </div>
               </CardContent>
             </Card>
           </div>
@@ -325,7 +336,7 @@ export default function ContributePage() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-20 bg-[#00071B]">
+      <section className="py-20 bg-[#00071B] relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="font-serif text-4xl font-bold text-[#FEFFFF] mb-6">Every Contribution Matters</h2>
           <p className="text-xl text-[#D6B585] mb-8 max-w-2xl mx-auto">

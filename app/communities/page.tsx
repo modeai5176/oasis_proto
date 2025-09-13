@@ -21,8 +21,13 @@ export default function CommunitiesPage() {
             muted
             playsInline
             preload="auto"
+            webkit-playsinline="true"
+            x5-playsinline="true"
+            x5-video-player-type="h5"
+            x5-video-player-fullscreen="false"
             className="object-cover w-full h-full"
             poster="/images/video-poster.jpg"
+            style={{ objectFit: 'cover' }}
           >
             <source src="/desert.mp4" type="video/mp4" />
             Your browser does not support the video tag.

@@ -3,9 +3,9 @@
 import Link from "next/link"
 import Image from "next/image"
 import { ArrowRight, Users, Heart, Lightbulb, Calendar, Quote } from "lucide-react"
+import { CamelIcon, ElephantIcon } from "@/components/icons"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { CamelIcon, ElephantIcon, OasisIcon } from "@/components/icons"
 import { AnimationWrapper } from "@/app/components/animation-wrapper"
 
 export default function HomePage() {
@@ -21,8 +21,13 @@ export default function HomePage() {
             muted
             playsInline
             preload="auto"
+            webkit-playsinline="true"
+            x5-playsinline="true"
+            x5-video-player-type="h5"
+            x5-video-player-fullscreen="false"
             className="object-cover w-full h-full"
             poster="/images/video-poster.jpg"
+            style={{ objectFit: 'cover' }}
           >
             <source src="/desert.mp4" type="video/mp4" />
             Your browser does not support the video tag.
@@ -62,12 +67,6 @@ export default function HomePage() {
           </div>
         </div>
 
-        <div className="absolute bottom-10 left-10 opacity-20 float-animation">
-          <CamelIcon className="h-16 w-16 text-white" />
-        </div>
-        <div className="absolute top-20 right-20 opacity-20 float-animation">
-          <OasisIcon className="h-12 w-12 text-amber-200" />
-        </div>
       </section>
 
       {/* Mission Pillars */}
@@ -292,14 +291,6 @@ export default function HomePage() {
 
       {/* Enhanced Call to Action */}
       <section className="py-12 md:py-20 bg-[#00071B] relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-6 left-6 md:top-10 md:left-10 parallax" data-speed="0.3">
-            <OasisIcon className="h-20 w-20 md:h-32 md:w-32" />
-          </div>
-          <div className="absolute bottom-6 right-6 md:bottom-10 md:right-10 parallax" data-speed="0.5">
-            <CamelIcon className="h-16 w-16 md:h-24 md:w-24" />
-          </div>
-        </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-[#FEFFFF] mb-6 slide-in-top">Ready to Make a Difference?</h2>

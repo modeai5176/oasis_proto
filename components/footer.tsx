@@ -5,14 +5,6 @@ import { ElephantIcon } from "@/components/icons"
 export function Footer() {
   return (
     <footer className="bg-[#00071B] text-[#FEFFFF] relative overflow-hidden" role="contentinfo">
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-10 left-10">
-          <ElephantIcon className="h-32 w-32" />
-        </div>
-        <div className="absolute bottom-10 right-10">
-          <ElephantIcon className="h-24 w-24" />
-        </div>
-      </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
