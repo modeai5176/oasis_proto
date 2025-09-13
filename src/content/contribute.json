@@ -1,0 +1,139 @@
+{
+  "hero": {
+    "title": "Support Our Mission",
+    "subtitle": "Help us build bridges between generations",
+    "description": "Your contribution enables us to create meaningful connections and lasting impact in communities across the region."
+  },
+  "impact": {
+    "title": "Your Impact",
+    "stats": [
+      {
+        "number": "500+",
+        "label": "Lives Connected",
+        "description": "Community members who have formed meaningful intergenerational relationships"
+      },
+      {
+        "number": "12",
+        "label": "Active Chapters",
+        "description": "Community chapters hosting regular intergenerational programming"
+      },
+      {
+        "number": "150+",
+        "label": "Events Hosted",
+        "description": "Workshops, festivals, and gatherings that bring generations together"
+      },
+      {
+        "number": "50+",
+        "label": "Stories Preserved",
+        "description": "Elder wisdom and life stories documented for future generations"
+      }
+    ]
+  },
+  "donationLevels": [
+    {
+      "amount": 25,
+      "title": "Community Friend",
+      "description": "Provides materials for one storytelling workshop",
+      "benefits": ["Quarterly newsletter", "Impact updates"]
+    },
+    {
+      "amount": 50,
+      "title": "Bridge Builder",
+      "description": "Sponsors refreshments for two community gatherings",
+      "benefits": ["Quarterly newsletter", "Impact updates", "Volunteer appreciation events"]
+    },
+    {
+      "amount": 100,
+      "title": "Wisdom Keeper",
+      "description": "Funds equipment for digital storytelling projects",
+      "benefits": ["Quarterly newsletter", "Impact updates", "Volunteer appreciation events", "Annual report"]
+    },
+    {
+      "amount": 250,
+      "title": "Generation Connector",
+      "description": "Supports a full month of programming for one chapter",
+      "benefits": ["All previous benefits", "Invitation to donor appreciation dinner", "Recognition in annual report"]
+    },
+    {
+      "amount": 500,
+      "title": "Community Champion",
+      "description": "Enables launch of a new community chapter",
+      "benefits": ["All previous benefits", "Personal impact report", "Advisory board invitation"]
+    }
+  ],
+  "paymentMethods": {
+    "title": "Ways to Give",
+    "methods": [
+      {
+        "name": "PayPal",
+        "description": "Secure online donations via PayPal",
+        "icon": "paypal",
+        "link": "https://paypal.me/oasismirage"
+      },
+      {
+        "name": "M-Pesa",
+        "description": "Mobile money donations for our international supporters",
+        "icon": "mobile",
+        "details": "Paybill: 247247, Account: OASISMIRAGE"
+      },
+      {
+        "name": "GoFundMe",
+        "description": "Support specific projects and campaigns",
+        "icon": "heart",
+        "link": "https://gofundme.com/oasismirage"
+      },
+      {
+        "name": "Bank Transfer",
+        "description": "Direct bank transfers for larger donations",
+        "icon": "bank",
+        "details": "Contact us for banking details"
+      }
+    ]
+  },
+  "otherWays": {
+    "title": "Other Ways to Help",
+    "options": [
+      {
+        "title": "Volunteer Your Time",
+        "description": "Join our team of dedicated volunteers helping with events, administration, and program delivery.",
+        "action": "Sign up to volunteer"
+      },
+      {
+        "title": "Share Your Skills",
+        "description": "Teach workshops, mentor others, or contribute your professional expertise to our programs.",
+        "action": "Offer your skills"
+      },
+      {
+        "title": "Spread the Word",
+        "description": "Help us reach more people by sharing our mission with friends, family, and colleagues.",
+        "action": "Share our story"
+      },
+      {
+        "title": "Corporate Partnership",
+        "description": "Partner with us to provide employee volunteer opportunities and community engagement.",
+        "action": "Explore partnerships"
+      }
+    ]
+  },
+  "transparency": {
+    "title": "Financial Transparency",
+    "description": "We believe in complete transparency about how your donations are used.",
+    "breakdown": [
+      {
+        "category": "Programs & Services",
+        "percentage": 75,
+        "description": "Direct program costs, materials, and community events"
+      },
+      {
+        "category": "Operations",
+        "percentage": 20,
+        "description": "Administrative costs, technology, and facility expenses"
+      },
+      {
+        "category": "Fundraising",
+        "percentage": 5,
+        "description": "Costs associated with raising funds for our mission"
+      }
+    ]
+  }
+}

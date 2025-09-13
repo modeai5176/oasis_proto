@@ -1,0 +1,78 @@
+{
+  "hero": {
+    "title": "Our Communities",
+    "subtitle": "Discover vibrant intergenerational connections in your area",
+    "description": "Join one of our thriving community chapters where people of all ages come together to share, learn, and grow."
+  },
+  "communities": [
+    {
+      "id": "riverside",
+      "name": "Riverside Chapter",
+      "location": "Riverside Community Center",
+      "address": "123 River Street, Riverside, CA 92501",
+      "meetingTime": "Every Saturday, 2:00 PM - 4:00 PM",
+      "description": "Our flagship chapter brings together seniors and young families for storytelling, skill-sharing, and community projects.",
+      "activities": ["Story Circles", "Skill Workshops", "Community Garden", "Tech Mentoring"],
+      "coordinator": "Maria Santos",
+      "contact": "riverside@oasismirage.org",
+      "members": 45,
+      "established": "2023"
+    },
+    {
+      "id": "downtown",
+      "name": "Downtown Hub",
+      "location": "Central Library Meeting Room",
+      "address": "456 Main Street, Downtown, CA 90210",
+      "meetingTime": "Every Wednesday, 6:00 PM - 8:00 PM",
+      "description": "An evening chapter perfect for working professionals and retirees to connect over shared interests and experiences.",
+      "activities": ["Book Club", "Career Mentoring", "Art Projects", "Cooking Classes"],
+      "coordinator": "James Wilson",
+      "contact": "downtown@oasismirage.org",
+      "members": 32,
+      "established": "2023"
+    },
+    {
+      "id": "eastside",
+      "name": "Eastside Connections",
+      "location": "Eastside Senior Center",
+      "address": "789 Oak Avenue, Eastside, CA 91234",
+      "meetingTime": "Every Sunday, 1:00 PM - 3:00 PM",
+      "description": "A bilingual chapter serving our diverse Eastside community with culturally rich programming.",
+      "activities": ["Cultural Exchange", "Language Practice", "Traditional Crafts", "Music Sessions"],
+      "coordinator": "Ana Gutierrez",
+      "contact": "eastside@oasismirage.org",
+      "members": 28,
+      "established": "2024"
+    }
+  ],
+  "joinProcess": {
+    "title": "How to Join",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Choose Your Chapter",
+        "description": "Find the community chapter that works best for your schedule and location."
+      },
+      {
+        "step": 2,
+        "title": "Attend a Meeting",
+        "description": "Drop by any regular meeting - no appointment necessary! We welcome newcomers warmly."
+      },
+      {
+        "step": 3,
+        "title": "Get Involved",
+        "description": "Participate in activities, share your skills, and help us build stronger intergenerational bonds."
+      }
+    ]
+  },
+  "startChapter": {
+    "title": "Start a New Chapter",
+    "description": "Interested in bringing Oasis & Mirage to your community? We provide training, resources, and ongoing support to help you launch a successful chapter.",
+    "requirements": [
+      "Commitment to our mission and values",
+      "Ability to secure a regular meeting space",
+      "Willingness to complete our facilitator training",
+      "Enthusiasm for bringing generations together"
+    ]
+  }
+}

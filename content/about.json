@@ -1,0 +1,77 @@
+{
+  "hero": {
+    "title": "About Oasis & Mirage",
+    "description": "Dedicated to strengthening communities by fostering connection, resilience, and shared growth."
+  },
+  "story": "Oasis & Mirage is dedicated to strengthening communities by fostering connection, resilience, and shared growth. We create spaces of refuge and renewal where individuals come together to support one another, access resources, and transform challenges into opportunities. Like an oasis, we provide nourishment and belonging; like a mirage, we challenge illusions and inspire vision, guiding communities toward unity, clarity, and lasting well-being.",
+  "vision": {
+    "title": "Our Vision & Values",
+    "values": [
+      {
+        "title": "Community Connection",
+        "description": "Creating spaces of refuge and renewal where individuals come together to support one another.",
+        "icon": "book-open"
+      },
+      {
+        "title": "Grassroots Leadership",
+        "description": "Real change starts in communities, led by communities.",
+        "icon": "users"
+      },
+      {
+        "title": "Resilience Building",
+        "description": "Strengthening communities through collective wisdom and mutual support.",
+        "icon": "megaphone"
+      },
+      {
+        "title": "Shared Growth",
+        "description": "Helping individuals access resources and transform challenges into opportunities.",
+        "icon": "heart"
+      }
+    ]
+  },
+  "symbolism": {
+    "title": "Why 'Oasis & Mirage'",
+    "description": "Like an oasis, we provide nourishment and belonging; like a mirage, we challenge illusions and inspire vision, guiding communities toward unity, clarity, and lasting well-being.",
+    "symbols": [
+      {
+        "name": "Camel",
+        "meaning": "Resilience and the ability to thrive in challenging conditions"
+      },
+      {
+        "name": "Elephant",
+        "meaning": "Family bonds, protection, and collective memory"
+      }
+    ]
+  },
+  "team": [
+    {
+      "name": "Sarah Kimani",
+      "role": "Founder & Director",
+      "bio": "Community organizer with 15 years experience in intergenerational programming."
+    },
+    {
+      "name": "Dr. James Rodriguez",
+      "role": "Program Coordinator",
+      "bio": "Gerontologist specializing in active aging and community engagement."
+    },
+    {
+      "name": "Amara Okafor",
+      "role": "Youth Engagement Lead",
+      "bio": "Former youth worker passionate about bridging generational divides."
+    }
+  ],
+  "faq": [
+    {
+      "question": "How are donations used?",
+      "answer": "75% goes directly to community programs, 15% to operational costs, and 10% to growth and outreach."
+    },
+    {
+      "question": "How can I start a community circle?",
+      "answer": "Contact us through our form. We provide training, resources, and ongoing support for new circle leaders."
+    },
+    {
+      "question": "Is this a religious organization?",
+      "answer": "No, we are secular and welcome people of all backgrounds and beliefs."
+    }
+  ]
+}

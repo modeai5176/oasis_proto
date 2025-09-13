@@ -1,0 +1,47 @@
+{
+  "hero": {
+    "title": "Contribute",
+    "description": "Every contribution powers real community work and helps bridge generations."
+  },
+  "donationTiers": [
+    {
+      "amount": 500,
+      "currency": "INR",
+      "title": "Community Supporter",
+      "description": "Supports one community circle session"
+    },
+    {
+      "amount": 1000,
+      "currency": "INR",
+      "title": "Program Sponsor",
+      "description": "Funds materials for a month of activities"
+    },
+    {
+      "amount": 2500,
+      "currency": "INR",
+      "title": "Circle Champion",
+      "description": "Sponsors a new community circle startup"
+    }
+  ],
+  "transparency": {
+    "title": "How Your Donation Helps",
+    "breakdown": [
+      { "category": "Community Programs", "percentage": 75 },
+      { "category": "Operations", "percentage": 15 },
+      { "category": "Growth & Outreach", "percentage": 10 }
+    ]
+  },
+  "mpesaInstructions": {
+    "paybill": "123456",
+    "accountNumber": "OASIS",
+    "steps": [
+      "Go to M-Pesa menu",
+      "Select Lipa na M-Pesa",
+      "Select Pay Bill",
+      "Enter Business Number: 123456",
+      "Enter Account Number: OASIS",
+      "Enter Amount",
+      "Enter your M-Pesa PIN"
+    ]
+  }
+}

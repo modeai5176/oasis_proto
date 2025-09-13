@@ -1,0 +1,67 @@
+{
+  "hero": {
+    "headline": "From mirage to community.",
+    "subhead": "Creating spaces of refuge and renewal where communities find nourishment, belonging, and lasting well-being.",
+    "primaryCta": "Join the Community",
+    "secondaryCta": "Donate"
+  },
+  "mission": {
+    "title": "Our Mission",
+    "pillars": [
+      {
+        "title": "Connection",
+        "description": "Fostering meaningful relationships and creating spaces of refuge and renewal where individuals come together to support one another.",
+        "icon": "users"
+      },
+      {
+        "title": "Resilience",
+        "description": "Strengthening communities through collective wisdom and mutual support, helping people thrive in challenging conditions.",
+        "icon": "shield"
+      },
+      {
+        "title": "Shared Growth",
+        "description": "Creating opportunities for individuals to access resources and transform challenges into opportunities for lasting well-being.",
+        "icon": "trending-up"
+      }
+    ]
+  },
+  "stats": [
+    { "label": "Communities reached", "value": 47 },
+    { "label": "Seniors engaged", "value": 1200 },
+    { "label": "Volunteer hours", "value": 8500 }
+  ],
+  "quotes": [
+    {
+      "text": "This community gave me purpose again. At 78, I'm still learning and teaching.",
+      "author": "Margaret Chen",
+      "role": "Community Elder",
+      "image": "/placeholder.svg?height=80&width=80"
+    },
+    {
+      "text": "The wisdom shared here has shaped how I approach challenges in my own life.",
+      "author": "David Ochieng",
+      "role": "Youth Volunteer",
+      "image": "/placeholder.svg?height=80&width=80"
+    }
+  ],
+  "upcomingEvents": [
+    {
+      "title": "Intergenerational Storytelling Circle",
+      "date": "2025-01-15",
+      "location": "Chicago Community Center",
+      "type": "Workshop"
+    },
+    {
+      "title": "Senior Leadership Summit",
+      "date": "2025-01-22",
+      "location": "Nairobi, Kenya",
+      "type": "Summit"
+    },
+    {
+      "title": "Caregiver Support Group",
+      "date": "2025-01-28",
+      "location": "Virtual",
+      "type": "Support"
+    }
+  ]
+}

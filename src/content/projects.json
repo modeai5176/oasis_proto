@@ -1,0 +1,112 @@
+{
+  "hero": {
+    "title": "Projects & Events",
+    "subtitle": "Meaningful initiatives that bring generations together",
+    "description": "Explore our ongoing projects and upcoming events designed to foster intergenerational connection and community impact."
+  },
+  "featuredProjects": [
+    {
+      "id": "wisdom-keepers",
+      "title": "Wisdom Keepers Archive",
+      "description": "A digital storytelling project preserving the life stories and wisdom of community elders through video interviews conducted by young volunteers.",
+      "status": "ongoing",
+      "impact": "50+ stories collected, 25 young interviewers trained",
+      "image": "/images/wisdom-archive.jpg",
+      "startDate": "2023-06-01",
+      "participants": 75
+    },
+    {
+      "id": "skill-swap",
+      "title": "Intergenerational Skill Swap",
+      "description": "Monthly workshops where different generations teach each other valuable skills - from technology to traditional crafts.",
+      "status": "ongoing",
+      "impact": "120+ skills shared, 200+ participants",
+      "image": "/images/skill-swap.jpg",
+      "startDate": "2023-09-01",
+      "participants": 200
+    },
+    {
+      "id": "memory-garden",
+      "title": "Community Memory Garden",
+      "description": "A collaborative garden project where each plant represents a shared memory or story from community members of all ages.",
+      "status": "completed",
+      "impact": "Beautiful community space created, 80+ families involved",
+      "image": "/images/memory-garden.jpg",
+      "startDate": "2023-03-01",
+      "endDate": "2023-11-01",
+      "participants": 80
+    }
+  ],
+  "upcomingEvents": [
+    {
+      "id": "spring-festival",
+      "title": "Spring Intergenerational Festival",
+      "date": "2024-04-15",
+      "time": "10:00 AM - 4:00 PM",
+      "location": "Riverside Park",
+      "description": "A day-long celebration featuring performances, workshops, food, and activities for all ages.",
+      "registration": "Free, registration recommended",
+      "capacity": 500
+    },
+    {
+      "id": "storytelling-workshop",
+      "title": "Digital Storytelling Workshop",
+      "date": "2024-03-22",
+      "time": "2:00 PM - 5:00 PM",
+      "location": "Downtown Library",
+      "description": "Learn to create compelling digital stories with guidance from experienced storytellers.",
+      "registration": "Required, $10 suggested donation",
+      "capacity": 20
+    },
+    {
+      "id": "cooking-exchange",
+      "title": "Recipe Exchange & Cooking Class",
+      "date": "2024-03-30",
+      "time": "1:00 PM - 4:00 PM",
+      "location": "Community Kitchen",
+      "description": "Share family recipes and cooking techniques across generations while preparing a meal together.",
+      "registration": "Required, $15 for ingredients",
+      "capacity": 30
+    }
+  ],
+  "pastEvents": [
+    {
+      "title": "Holiday Traditions Sharing",
+      "date": "2023-12-10",
+      "participants": 85,
+      "description": "Community members shared holiday traditions from different cultures and generations."
+    },
+    {
+      "title": "Technology Mentoring Day",
+      "date": "2023-11-18",
+      "participants": 60,
+      "description": "Young volunteers helped seniors navigate smartphones, social media, and digital tools."
+    },
+    {
+      "title": "Oral History Workshop",
+      "date": "2023-10-14",
+      "participants": 40,
+      "description": "Training session for community members to conduct and preserve oral history interviews."
+    }
+  ],
+  "getInvolved": {
+    "title": "Get Involved",
+    "opportunities": [
+      {
+        "role": "Event Volunteer",
+        "description": "Help with setup, registration, and coordination at our events",
+        "timeCommitment": "Flexible, event-based"
+      },
+      {
+        "role": "Project Leader",
+        "description": "Lead a specific project or initiative in your area of expertise",
+        "timeCommitment": "5-10 hours per month"
+      },
+      {
+        "role": "Workshop Facilitator",
+        "description": "Share your skills by leading workshops for intergenerational groups",
+        "timeCommitment": "2-4 hours per month"
+      }
+    ]
+  }
+}

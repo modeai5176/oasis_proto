@@ -1,0 +1,68 @@
+{
+  "upcomingEvents": [
+    {
+      "id": "storytelling-jan",
+      "title": "Intergenerational Storytelling Circle",
+      "date": "2025-01-15",
+      "time": "2:00 PM - 4:00 PM",
+      "location": "Chicago Community Center, 123 Main St",
+      "type": "Workshop",
+      "description": "Share stories across generations and discover common threads in our experiences.",
+      "rsvpLink": "#"
+    },
+    {
+      "id": "leadership-summit",
+      "title": "Senior Leadership Summit",
+      "date": "2025-01-22",
+      "time": "9:00 AM - 5:00 PM",
+      "location": "Nairobi Conference Center, Kenya",
+      "type": "Summit",
+      "description": "Empowering senior voices in community leadership and decision-making.",
+      "rsvpLink": "#"
+    },
+    {
+      "id": "caregiver-support",
+      "title": "Caregiver Support Group",
+      "date": "2025-01-28",
+      "time": "6:00 PM - 8:00 PM",
+      "location": "Virtual (Zoom)",
+      "type": "Support",
+      "description": "Monthly gathering for caregivers to share experiences and resources.",
+      "rsvpLink": "#"
+    }
+  ],
+  "pastEvents": [
+    {
+      "title": "Holiday Celebration & Reflection",
+      "date": "2024-12-15",
+      "location": "Multiple locations",
+      "attendees": 150
+    },
+    {
+      "title": "Community Garden Project Launch",
+      "date": "2024-11-20",
+      "location": "Chicago, IL",
+      "attendees": 45
+    }
+  ],
+  "projects": [
+    {
+      "id": "digital-literacy",
+      "title": "Digital Literacy Exchange",
+      "goal": "Bridge the digital divide through peer-to-peer learning",
+      "beneficiaries": "200+ seniors and youth",
+      "status": "Active",
+      "description": "Young volunteers teach technology skills while learning life wisdom from senior participants.",
+      "impact": "85% of participants report increased confidence with technology"
+    },
+    {
+      "id": "oral-history",
+      "title": "Community Oral History Project",
+      "goal": "Preserve and share community stories",
+      "beneficiaries": "12 communities",
+      "status": "Ongoing",
+      "description": "Recording and archiving stories from community elders for future generations.",
+      "impact": "Over 100 hours of stories collected and preserved"
+    }
+  ]
+}

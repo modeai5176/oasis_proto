@@ -1,0 +1,54 @@
+{
+  "hero": {
+    "title": "About Oasis & Mirage",
+    "subtitle": "Bridging generations through meaningful connections and shared wisdom",
+    "description": "We believe that every generation has unique perspectives and experiences that can enrich our communities when shared across age groups."
+  },
+  "mission": {
+    "title": "Our Mission",
+    "description": "To create sustainable intergenerational connections that honor the wisdom of elders while empowering younger voices, fostering mutual understanding and community resilience."
+  },
+  "vision": {
+    "title": "Our Vision",
+    "description": "A world where age becomes a bridge rather than a barrier, where every person's story contributes to the collective wisdom of humanity."
+  },
+  "values": [
+    {
+      "title": "Respect",
+      "description": "Honoring the dignity and worth of every individual regardless of age"
+    },
+    {
+      "title": "Connection",
+      "description": "Building meaningful relationships that transcend generational boundaries"
+    },
+    {
+      "title": "Wisdom",
+      "description": "Recognizing that learning flows in all directions across generations"
+    },
+    {
+      "title": "Community",
+      "description": "Creating inclusive spaces where everyone belongs and contributes"
+    }
+  ],
+  "story": {
+    "title": "Our Story",
+    "content": "Founded in 2023, Oasis & Mirage emerged from a simple observation: in our rapidly changing world, generations often live parallel lives without truly connecting. Our founders, spanning three generations themselves, recognized the profound loss this represents—not just for individuals, but for society as a whole.\n\nWhat started as informal gatherings in community centers has grown into a movement that touches lives across multiple communities. We've learned that when we create the right conditions—respect, curiosity, and genuine care—magic happens. Stories are shared, wisdom is exchanged, and lasting friendships form."
+  },
+  "team": [
+    {
+      "name": "Sarah Chen",
+      "role": "Executive Director",
+      "bio": "Former social worker with 15 years of experience in community development"
+    },
+    {
+      "name": "Marcus Johnson",
+      "role": "Program Coordinator",
+      "bio": "Community organizer passionate about intergenerational dialogue"
+    },
+    {
+      "name": "Elena Rodriguez",
+      "role": "Volunteer Coordinator",
+      "bio": "Retired teacher dedicated to lifelong learning and connection"
+    }
+  ]
+}

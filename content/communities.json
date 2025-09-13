@@ -1,0 +1,49 @@
+{
+  "hero": {
+    "title": "Communities",
+    "description": "A global network of local circles where generations connect, learn, and grow together."
+  },
+  "communities": [
+    {
+      "id": "chicago-il",
+      "title": "Chicago Intergenerational Circle",
+      "city": "Chicago, IL",
+      "region": "North America",
+      "type": "Senior Circle",
+      "meetingCadence": "Weekly Thursdays, 2-4 PM",
+      "leadContact": "sarah.k***@email.com",
+      "tags": ["Storytelling", "Mentorship", "Arts"],
+      "description": "Our flagship circle brings together seniors and young adults for storytelling, skill-sharing, and community projects.",
+      "nextMeeting": "2025-01-16",
+      "memberCount": 24
+    },
+    {
+      "id": "nairobi-ke",
+      "title": "Nairobi Wisdom Keepers",
+      "city": "Nairobi, Kenya",
+      "region": "Africa",
+      "type": "Intergen Workshop",
+      "meetingCadence": "Bi-weekly Saturdays, 10 AM-12 PM",
+      "leadContact": "david.o***@email.com",
+      "tags": ["Traditional Knowledge", "Youth Leadership", "Community Development"],
+      "description": "Connecting urban youth with rural elders to preserve traditional knowledge and develop community solutions.",
+      "nextMeeting": "2025-01-18",
+      "memberCount": 18
+    },
+    {
+      "id": "pune-in",
+      "title": "Pune Caregiver Support Network",
+      "city": "Pune, India",
+      "region": "Asia",
+      "type": "Caregiver Group",
+      "meetingCadence": "Monthly, First Sunday, 4-6 PM",
+      "leadContact": "priya.s***@email.com",
+      "tags": ["Caregiver Support", "Wellness", "Family"],
+      "description": "Supporting families caring for elderly relatives through shared experiences and practical resources.",
+      "nextMeeting": "2025-02-02",
+      "memberCount": 15
+    }
+  ],
+  "regions": ["All", "Africa", "North America", "Asia"],
+  "types": ["All", "Senior Circle", "Intergen Workshop", "Caregiver Group"]
+}
