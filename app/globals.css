@@ -298,7 +298,7 @@
   .slide-in-left {
     opacity: 0;
     transform: translateX(-100px);
-    transition: all 3.0s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 1.2s cubic-bezier(0.4, 0, 0.2, 1);
     will-change: opacity, transform;
   }
 
@@ -310,7 +310,7 @@
   .slide-in-right {
     opacity: 0;
     transform: translateX(100px);
-    transition: all 2.5s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 1.2s cubic-bezier(0.4, 0, 0.2, 1);
     will-change: opacity, transform;
   }
 
@@ -322,7 +322,7 @@
   .slide-in-top {
     opacity: 0;
     transform: translateY(-50px);
-    transition: all 1.0s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 1.2s cubic-bezier(0.4, 0, 0.2, 1);
     will-change: opacity, transform;
   }
 
@@ -334,7 +334,7 @@
   .slide-in-bottom {
     opacity: 0;
     transform: translateY(50px);
-    transition: all 1.0s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 1.2s cubic-bezier(0.4, 0, 0.2, 1);
     will-change: opacity, transform;
   }
 

@@ -2,338 +2,314 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import { Calendar, MapPin, Users, Clock, ArrowRight } from "lucide-react"
+import { ArrowRight, Heart, CheckCircle, Star, Users, Target, Award, Phone, Mail } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
 import { AnimationWrapper } from "@/app/components/animation-wrapper"
 
-export default function ProjectsPage() {
+export default function StoriesImpactPage() {
   return (
     <AnimationWrapper>
       <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            preload="auto"
-            webkit-playsinline="true"
-            x5-playsinline="true"
-            x5-video-player-type="h5"
-            x5-video-player-fullscreen="false"
-            className="object-cover w-full h-full"
-            poster="/images/video-poster.jpg"
-            style={{ objectFit: 'cover' }}
-          >
-            <source src="/desert.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-          <div className="absolute inset-0 bg-gradient-to-b from-[#00071B]/40 to-transparent"></div>
-        </div>
+        {/* Hero Section */}
+        <section className="relative h-screen flex items-center justify-center overflow-hidden">
+          <div className="absolute inset-0 z-0">
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              preload="auto"
+              webkit-playsinline="true"
+              x5-playsinline="true"
+              x5-video-player-type="h5"
+              x5-video-player-fullscreen="false"
+              className="object-cover w-full h-full"
+              poster="/images/video-poster.jpg"
+              style={{ objectFit: 'cover' }}
+            >
+              <source src="/desert.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <div className="absolute inset-0 bg-gradient-to-b from-[#00071B]/40 to-transparent"></div>
+          </div>
 
-        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="font-serif text-5xl md:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-lg slide-in-top">
-            Projects & Events
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-100 mb-8 leading-relaxed drop-shadow-md slide-in-top">
-            Join meaningful initiatives that bring communities together and create lasting positive impact
-          </p>
-          <Button asChild size="lg" className="bg-[#1C3163] hover:bg-[#D6B585] text-[#FEFFFF] hover:text-[#00071B] shadow-xl text-lg px-6 py-4">
-            <Link href="#upcoming">
-              View Upcoming Events <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
-          </Button>
-        </div>
-      </section>
-
-      {/* Upcoming Events */}
-      <section id="upcoming" className="py-20 bg-[#FEFFFF]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="font-serif text-4xl font-bold text-[#1C3163] mb-6 slide-in-top">Upcoming Events</h2>
-            <p className="text-xl text-[#00071B] max-w-3xl mx-auto slide-in-top">
-              Join us for these special gatherings designed to strengthen community bonds
+          <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 className="font-serif text-5xl md:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-lg slide-in-top">
+              Finding the Oasis: Real Change, Real People
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-100 mb-8 leading-relaxed drop-shadow-md slide-in-top">
+              We don't just count numbers; we strive for changes from the inside out. Our foundation is built on acceptance, respect, and the belief that everyone has the power to bring change within and around them.
             </p>
           </div>
+        </section>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <Card className="border-[#1C3163] hover:shadow-lg transition-shadow overflow-hidden bg-[#FEFFFF] hover-slide-up">
-              <div className="h-48 relative">
-                <Image src="/images/wisdom-circle.png" alt="Storytelling workshop" fill className="object-cover" />
-                <div className="absolute top-4 left-4">
-                  <Badge className="bg-[#1C3163] text-[#FEFFFF]">This Weekend</Badge>
+        {/* Visible Transformation Section */}
+        <section className="py-20 bg-[#FEFFFF]">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="font-serif text-4xl font-bold text-[#1C3163] mb-6 slide-in-top">
+                When Transformation Takes Hold: Three Months Later
+              </h2>
+              <p className="text-xl text-[#00071B] max-w-3xl mx-auto slide-in-top">
+                What changes we see in our participants after just three months of support and community connection.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <Card className="text-center hover-slide-up card-slide-left">
+                <CardHeader>
+                  <div className="w-16 h-16 bg-[#1C3163] rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Star className="h-8 w-8 text-[#FEFFFF]" />
+                  </div>
+                  <CardTitle className="text-[#1C3163] text-xl">Confidence & Vision</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-[#00071B] leading-relaxed">
+                    Participants become more <strong className="text-[#1C3163]">confident</strong>, dreaming big, 
+                    and trying to achieve their goals. They see possibilities where they once saw obstacles.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="text-center hover-slide-up card-slide-top">
+                <CardHeader>
+                  <div className="w-16 h-16 bg-[#D6B585] rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Users className="h-8 w-8 text-[#00071B]" />
+                  </div>
+                  <CardTitle className="text-[#1C3163] text-xl">Organizing & Skills</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-[#00071B] leading-relaxed">
+                    They overcome skill challenges and become <strong className="text-[#1C3163]">confident in organizing</strong>. 
+                    What once seemed impossible becomes achievable with community support.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="text-center hover-slide-up card-slide-right">
+                <CardHeader>
+                  <div className="w-16 h-16 bg-[#1C3163] rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Target className="h-8 w-8 text-[#FEFFFF]" />
+                  </div>
+                  <CardTitle className="text-[#1C3163] text-xl">Self-Reliance</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-[#00071B] leading-relaxed">
+                    They take baby steps forward and become <strong className="text-[#1C3163]">self-reliant organizers</strong>. 
+                    Independence grows through supported practice and community encouragement.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* A Life Changed - Pradeep's Story */}
+        <section className="py-20 bg-[#F8F9FA]">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="font-serif text-4xl font-bold text-[#1C3163] mb-6 slide-in-top">
+                A Story of Unconditional Support: Pradeep's Journey
+              </h2>
+              <p className="text-xl text-[#00071B] max-w-3xl mx-auto slide-in-top">
+                A real story of transformation through community support and unwavering commitment.
+              </p>
+            </div>
+
+            <div className="max-w-5xl mx-auto">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div className="slide-in-left">
+                  <div className="bg-[#1C3163] p-8 rounded-2xl text-[#FEFFFF]">
+                    <h3 className="font-serif text-2xl font-bold mb-6">The Situation (Before)</h3>
+                    <div className="space-y-4 text-lg leading-relaxed">
+                      <p>
+                        Pradeep, a well-read, witty senior and active community member, began experiencing 
+                        difficulty remembering essential tasks.
+                      </p>
+                      <p>
+                        He stopped driving and needed assistance with basic necessities like cooked food. 
+                        The challenges were mounting, and support was needed.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="slide-in-right">
+                  <div className="bg-[#D6B585] p-8 rounded-2xl text-[#00071B]">
+                    <h3 className="font-serif text-2xl font-bold mb-6">O&M's Action (The Support)</h3>
+                    <div className="space-y-4 text-lg leading-relaxed">
+                      <p>
+                        As a community organizer, we were compelled to step in. We focused on restoring 
+                        normalcy with basic needs until long-term solutions were available.
+                      </p>
+                      <p className="font-bold text-xl">
+                        We raised funds and made <span className="text-[#1C3163]">SIX food deliveries</span> 
+                        and provided necessary items.
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <CardHeader>
-                <div className="flex items-center gap-4 text-sm text-[#1C3163] mb-2">
-                  <div className="flex items-center gap-1">
-                    <Calendar className="h-4 w-4" />
-                    <span>March 15, 2024</span>
-                  </div>
-                  <div className="flex items-center gap-1">
-                    <Clock className="h-4 w-4" />
-                    <span>2:00 PM - 5:00 PM</span>
-                  </div>
-                </div>
-                <CardTitle className="text-[#1C3163]">Storytelling Workshop</CardTitle>
-                <CardDescription className="text-[#00071B]">
-                  Learn the art of sharing personal stories in a supportive environment. Community members will share techniques
-                  for meaningful storytelling while participants practice active listening.
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="flex items-center gap-4 text-sm text-[#1C3163] mb-4">
-                  <div className="flex items-center gap-1">
-                    <MapPin className="h-4 w-4" />
-                    <span>Downtown Community Center</span>
-                  </div>
-                  <div className="flex items-center gap-1">
-                    <Users className="h-4 w-4" />
-                    <span>20 spots available</span>
-                  </div>
-                </div>
-                <Button className="w-full bg-[#1C3163] hover:bg-[#D6B585] text-[#FEFFFF] hover:text-[#00071B]">Register Now</Button>
-              </CardContent>
-            </Card>
 
-            <Card className="border-[#1C3163] hover:shadow-lg transition-shadow overflow-hidden bg-[#FEFFFF] hover-slide-up">
-              <div className="h-48 relative">
-                <div className="absolute inset-0 bg-[#D6B585] flex items-center justify-center">
-                  <span className="text-[#00071B] font-bold text-xl">Community Garden</span>
+              <div className="mt-12 text-center">
+                <Card className="bg-gradient-to-r from-[#1C3163] to-[#D6B585] border-0 hover-slide-up">
+                  <CardContent className="p-8">
+                    <div className="max-w-3xl mx-auto">
+                      <h3 className="font-serif text-3xl font-bold text-[#FEFFFF] mb-6">
+                        The Lesson
+                      </h3>
+                      <blockquote className="text-2xl text-[#FEFFFF] leading-relaxed font-medium">
+                        "Accepting people the way they are, offering respect and love, and creating a platform has worked like a <strong>miracle</strong>."
+                      </blockquote>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Measuring Progress and Success */}
+        <section className="py-20 bg-[#00071B]">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="font-serif text-4xl font-bold text-[#FEFFFF] mb-6 slide-in-top">
+                How We Measure Success (Beyond the Numbers)
+              </h2>
+              <p className="text-xl text-[#D6B585] max-w-3xl mx-auto slide-in-top">
+                We focus on the quality of transformation, not just quantity. Here are the five signs we look for.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+              <Card className="text-center hover-slide-up card-slide-left bg-[#1C3163] border-[#D6B585]">
+                <CardHeader>
+                  <div className="w-16 h-16 bg-[#D6B585] rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Award className="h-8 w-8 text-[#00071B]" />
+                  </div>
+                  <CardTitle className="text-[#FEFFFF] text-lg">Quality</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-[#FEFFFF] text-sm leading-relaxed">
+                    Improvement in the quality of participation and effort in all activities.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="text-center hover-slide-up card-slide-top bg-[#1C3163] border-[#D6B585]">
+                <CardHeader>
+                  <div className="w-16 h-16 bg-[#D6B585] rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Heart className="h-8 w-8 text-[#00071B]" />
+                  </div>
+                  <CardTitle className="text-[#FEFFFF] text-lg">Changes</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-[#FEFFFF] text-sm leading-relaxed">
+                    Visible personal transformations and growth in confidence and capability.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="text-center hover-slide-up card-slide-top bg-[#1C3163] border-[#D6B585]">
+                <CardHeader>
+                  <div className="w-16 h-16 bg-[#D6B585] rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Star className="h-8 w-8 text-[#00071B]" />
+                  </div>
+                  <CardTitle className="text-[#FEFFFF] text-lg">Enthusiasm</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-[#FEFFFF] text-sm leading-relaxed">
+                    A noticeable increase in hope, excitement, and engagement with opportunities.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="text-center hover-slide-up card-slide-top bg-[#1C3163] border-[#D6B585]">
+                <CardHeader>
+                  <div className="w-16 h-16 bg-[#D6B585] rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Users className="h-8 w-8 text-[#00071B]" />
+                  </div>
+                  <CardTitle className="text-[#FEFFFF] text-lg">Self-Reliance</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-[#FEFFFF] text-sm leading-relaxed">
+                    Participants becoming self-sufficient organizers and community leaders.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="text-center hover-slide-up card-slide-right bg-[#1C3163] border-[#D6B585]">
+                <CardHeader>
+                  <div className="w-16 h-16 bg-[#D6B585] rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Target className="h-8 w-8 text-[#00071B]" />
+                  </div>
+                  <CardTitle className="text-[#FEFFFF] text-lg">Confidence</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-[#FEFFFF] text-sm leading-relaxed">
+                    People feeling confident, dreaming big, and setting achievable goals.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* Call to Action */}
+        <section className="py-20 bg-[#FEFFFF]">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="font-serif text-4xl font-bold text-[#1C3163] mb-6 slide-in-top">
+              Be Part of the Story
+            </h2>
+            <p className="text-xl text-[#00071B] mb-8 max-w-3xl mx-auto slide-in-top">
+              Join us in creating more transformation stories like Pradeep's. Your voice matters, and your support makes a difference.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center slide-in-bottom">
+              <Button
+                asChild
+                size="lg"
+                className="bg-[#1C3163] hover:bg-[#D6B585] text-[#FEFFFF] hover:text-[#00071B] shadow-xl hover:shadow-2xl transition-all text-lg px-8 py-4 btn-hover hover-glow font-semibold"
+              >
+                <Link href="/communities">
+                  Join a Group and Find Your Voice
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+              </Button>
+              <Button
+                asChild
+                size="lg"
+                variant="outline"
+                className="border-2 border-[#1C3163] text-[#1C3163] hover:bg-[#1C3163] hover:text-[#FEFFFF] shadow-xl hover:shadow-2xl transition-all text-lg px-8 py-4 font-semibold"
+              >
+                <Link href="/contribute">
+                  Support Our Work: Easy Donation
+                </Link>
+              </Button>
+            </div>
+          </div>
+        </section>
+
+        {/* Contact Information */}
+        <section className="py-16 bg-[#F8F9FA] border-t border-[#D6B585]/20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <h3 className="font-serif text-2xl font-bold text-[#1C3163] mb-6">
+                Ready to Start Your Transformation Story?
+              </h3>
+              <div className="flex flex-col md:flex-row justify-center items-center gap-6 text-[#00071B]">
+                <div className="flex items-center gap-2">
+                  <Phone className="h-5 w-5 text-[#1C3163]" />
+                  <span>Call us for support</span>
                 </div>
-                <div className="absolute top-4 left-4">
-                  <Badge className="bg-[#D6B585] text-[#00071B]">Next Week</Badge>
+                <div className="flex items-center gap-2">
+                  <Mail className="h-5 w-5 text-[#1C3163]" />
+                  <span>Email us anytime</span>
                 </div>
               </div>
-              <CardHeader>
-                <div className="flex items-center gap-4 text-sm text-[#1C3163] mb-2">
-                  <div className="flex items-center gap-1">
-                    <Calendar className="h-4 w-4" />
-                    <span>March 22, 2024</span>
-                  </div>
-                  <div className="flex items-center gap-1">
-                    <Clock className="h-4 w-4" />
-                    <span>10:00 AM - 2:00 PM</span>
-                  </div>
-                </div>
-                <CardTitle className="text-[#1C3163]">Community Garden Day</CardTitle>
-                <CardDescription className="text-[#00071B]">
-                  Join us for a hands-on gardening experience where community members share traditional growing wisdom while
-                  volunteers provide physical assistance and build connections.
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="flex items-center gap-4 text-sm text-[#1C3163] mb-4">
-                  <div className="flex items-center gap-1">
-                    <MapPin className="h-4 w-4" />
-                    <span>Riverside Community Garden</span>
-                  </div>
-                  <div className="flex items-center gap-1">
-                    <Users className="h-4 w-4" />
-                    <span>15 spots available</span>
-                  </div>
-                </div>
-                <Button className="w-full bg-[#D6B585] hover:bg-[#1C3163] text-[#00071B] hover:text-[#FEFFFF]">Register Now</Button>
-              </CardContent>
-            </Card>
-
-            <Card className="border-[#1C3163] hover:shadow-lg transition-shadow overflow-hidden bg-[#FEFFFF] hover-slide-up">
-              <div className="h-48 relative">
-                <div className="absolute inset-0 bg-[#1C3163] flex items-center justify-center">
-                  <span className="text-[#FEFFFF] font-bold text-xl">Tech Skills</span>
-                </div>
-                <div className="absolute top-4 left-4">
-                  <Badge className="bg-[#1C3163] text-[#FEFFFF]">Monthly</Badge>
-                </div>
-              </div>
-              <CardHeader>
-                <div className="flex items-center gap-4 text-sm text-[#1C3163] mb-2">
-                  <div className="flex items-center gap-1">
-                    <Calendar className="h-4 w-4" />
-                    <span>March 29, 2024</span>
-                  </div>
-                  <div className="flex items-center gap-1">
-                    <Clock className="h-4 w-4" />
-                    <span>1:00 PM - 4:00 PM</span>
-                  </div>
-                </div>
-                <CardTitle className="text-[#1C3163]">Tech Skills Exchange</CardTitle>
-                <CardDescription className="text-[#00071B]">
-                  Community members learn smartphone and computer skills from tech-savvy volunteers, while sharing life skills and
-                  professional expertise in return.
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="flex items-center gap-4 text-sm text-[#1C3163] mb-4">
-                  <div className="flex items-center gap-1">
-                    <MapPin className="h-4 w-4" />
-                    <span>Public Library - Tech Center</span>
-                  </div>
-                  <div className="flex items-center gap-1">
-                    <Users className="h-4 w-4" />
-                    <span>12 spots available</span>
-                  </div>
-                </div>
-                <Button className="w-full bg-[#1C3163] hover:bg-[#D6B585] text-[#FEFFFF] hover:text-[#00071B]">Register Now</Button>
-              </CardContent>
-            </Card>
-
-            <Card className="border-[#1C3163] hover:shadow-lg transition-shadow overflow-hidden bg-[#FEFFFF] hover-slide-up">
-              <div className="h-48 relative">
-                <div className="absolute inset-0 bg-[#D6B585] flex items-center justify-center">
-                  <span className="text-[#00071B] font-bold text-xl">Cultural Night</span>
-                </div>
-                <div className="absolute top-4 left-4">
-                  <Badge className="bg-[#D6B585] text-[#00071B]">Special Event</Badge>
-                </div>
-              </div>
-              <CardHeader>
-                <div className="flex items-center gap-4 text-sm text-[#1C3163] mb-2">
-                  <div className="flex items-center gap-1">
-                    <Calendar className="h-4 w-4" />
-                    <span>April 5, 2024</span>
-                  </div>
-                  <div className="flex items-center gap-1">
-                    <Clock className="h-4 w-4" />
-                    <span>6:00 PM - 9:00 PM</span>
-                  </div>
-                </div>
-                <CardTitle className="text-[#1C3163]">Heritage & Culture Night</CardTitle>
-                <CardDescription className="text-[#00071B]">
-                  A celebration of diverse cultural backgrounds featuring traditional foods, music, and stories shared
-                  across communities.
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="flex items-center gap-4 text-sm text-[#1C3163] mb-4">
-                  <div className="flex items-center gap-1">
-                    <MapPin className="h-4 w-4" />
-                    <span>Westside Cultural Center</span>
-                  </div>
-                  <div className="flex items-center gap-1">
-                    <span>50 spots available</span>
-                  </div>
-                </div>
-                <Button className="w-full bg-[#D6B585] hover:bg-[#1C3163] text-[#00071B] hover:text-[#FEFFFF]">Register Now</Button>
-              </CardContent>
-            </Card>
+            </div>
           </div>
-        </div>
-      </section>
-
-      {/* Ongoing Projects */}
-      <section className="py-20 bg-[#00071B]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="font-serif text-4xl font-bold text-[#FEFFFF] mb-6">Ongoing Projects</h2>
-            <p className="text-xl text-[#D6B585]">Long-term initiatives creating lasting impact in our communities</p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="border-[#1C3163] bg-[#FEFFFF]">
-              <CardHeader>
-                <div className="w-12 h-12 bg-[#1C3163]/10 rounded-lg flex items-center justify-center mb-4">
-                  <Users className="h-6 w-6 text-[#1C3163]" />
-                </div>
-                <CardTitle className="text-[#1C3163]">Wisdom Archive Project</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-[#00071B] mb-4">
-                  Recording and preserving life stories from community members to create a digital archive for future
-                  generations.
-                </CardDescription>
-                <div className="text-sm text-[#1C3163] mb-4">
-                  <strong>Progress:</strong> 127 stories collected
-                </div>
-                <Button
-                  variant="outline"
-                  className="w-full border-[#1C3163] text-[#1C3163] hover:bg-[#1C3163]/10 bg-transparent"
-                >
-                  Learn More
-                </Button>
-              </CardContent>
-            </Card>
-
-            <Card className="border-[#1C3163] bg-[#FEFFFF]">
-              <CardHeader>
-                <div className="w-12 h-12 bg-[#D6B585]/10 rounded-lg flex items-center justify-center mb-4">
-                  <MapPin className="h-6 w-6 text-[#D6B585]" />
-                </div>
-                <CardTitle className="text-[#1C3163]">Neighborhood Connections</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-[#00071B] mb-4">
-                  Pairing isolated individuals with volunteer "neighbors" for regular check-ins, errands, and companionship.
-                </CardDescription>
-                <div className="text-sm text-[#1C3163] mb-4">
-                  <strong>Active Pairs:</strong> 89 connections
-                </div>
-                <Button
-                  variant="outline"
-                  className="w-full border-[#D6B585] text-[#D6B585] hover:bg-[#D6B585]/10 bg-transparent"
-                >
-                  Volunteer
-                </Button>
-              </CardContent>
-            </Card>
-
-            <Card className="border-[#1C3163] bg-[#FEFFFF]">
-              <CardHeader>
-                <div className="w-12 h-12 bg-[#1C3163]/10 rounded-lg flex items-center justify-center mb-4">
-                  <Calendar className="h-6 w-6 text-[#1C3163]" />
-                </div>
-                <CardTitle className="text-[#1C3163]">Skills Mentorship Program</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-[#00071B] mb-4">
-                  Connecting experienced professionals with community members for career guidance and skill development.
-                </CardDescription>
-                <div className="text-sm text-[#1C3163] mb-4">
-                  <strong>Active Mentorships:</strong> 34 pairs
-                </div>
-                <Button
-                  variant="outline"
-                  className="w-full border-[#1C3163] text-[#1C3163] hover:bg-[#1C3163]/10 bg-transparent"
-                >
-                  Join Program
-                </Button>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Get Involved CTA */}
-      <section className="py-20 bg-[#FEFFFF]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="font-serif text-4xl font-bold text-[#1C3163] mb-6">Ready to Get Involved?</h2>
-          <p className="text-xl text-[#00071B] mb-8 max-w-2xl mx-auto">
-            Whether you want to volunteer, participate, or support our work, there's a place for you in our community.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              asChild
-              size="lg"
-              variant="secondary"
-              className="bg-[#1C3163] text-[#FEFFFF] hover:bg-[#D6B585] hover:text-[#00071B] shadow-xl text-lg px-6 py-4"
-            >
-              <Link href="/contribute">Support Our Work</Link>
-            </Button>
-            <Button
-              asChild
-              size="lg"
-              variant="outline"
-              className="border-2 border-[#1C3163] text-[#1C3163] hover:bg-[#D6B585] hover:text-[#00071B] bg-transparent shadow-xl text-lg px-6 py-4"
-            >
-              <Link href="/communities">Join a Community</Link>
-            </Button>
-          </div>
-        </div>
-      </section>
+        </section>
       </div>
     </AnimationWrapper>
   )

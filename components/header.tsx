@@ -10,10 +10,11 @@ export function Header() {
 
   const navigation = [
     { name: "HOME", href: "/" },
-    { name: "ABOUT & VISION", href: "/about" },
-    { name: "COMMUNITIES", href: "/communities" },
-    { name: "PROJECTS & EVENTS", href: "/projects" },
-    { name: "CONTRIBUTE", href: "/contribute" },
+    { name: "OUR MISSION", href: "/about" },
+    { name: "JOIN A GROUP", href: "/communities" },
+    { name: "STORIES & IMPACT", href: "/projects" },
+    { name: "DONATE", href: "/contribute" },
+    { name: "CONTACT", href: "/contact" },
   ]
 
   return (
