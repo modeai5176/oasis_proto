@@ -1,17 +1,41 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import Image from "next/image"
-import { ArrowRight, Users, Heart, Lightbulb, Calendar, Quote, Shield, CheckCircle, Phone, Mail } from "lucide-react"
-import { CamelIcon } from "@/components/icons"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { AnimationWrapper } from "@/app/components/animation-wrapper"
+import Link from "next/link";
+import Image from "next/image";
+import {
+  ArrowRight,
+  Users,
+  Heart,
+  Lightbulb,
+  Calendar,
+  Quote,
+  Shield,
+  CheckCircle,
+  Phone,
+  Mail,
+} from "lucide-react";
+import { CamelIcon } from "@/components/icons";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { AnimationWrapper } from "@/app/components/animation-wrapper";
+import { SiteBreadcrumb } from "@/components/breadcrumb";
 
 export default function HomePage() {
   return (
     <AnimationWrapper>
       <div className="min-h-screen">
+        {/* Breadcrumb Navigation */}
+        <div className="bg-[#00071B] border-b border-[#2D8C7E] shadow-lg">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <SiteBreadcrumb items={[]} />
+          </div>
+        </div>
         {/* Hero Section - The Oasis & Mirage Banner */}
         <section className="relative h-screen flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0 z-0">
@@ -25,9 +49,17 @@ export default function HomePage() {
               x5-playsinline="true"
               x5-video-player-type="h5"
               x5-video-player-fullscreen="false"
-              className="object-cover w-full h-full"
+              className="object-cover w-full h-full transition-opacity duration-1000 ease-in-out"
               poster="/images/video-poster.jpg"
-              style={{ objectFit: 'cover' }}
+              style={{ objectFit: "cover" }}
+              onEnded={(e) => {
+                e.currentTarget.style.opacity = "0.8";
+                setTimeout(() => {
+                  e.currentTarget.currentTime = 0;
+                  e.currentTarget.play();
+                  e.currentTarget.style.opacity = "1";
+                }, 100);
+              }}
             >
               <source src="/desert.mp4" type="video/mp4" />
               Your browser does not support the video tag.
@@ -46,20 +78,22 @@ export default function HomePage() {
 
               {/* Core Message */}
               <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-lg slide-in-top">
-                From Dreaming to Doing: <span className="text-[#D6B585]">Find Your Oasis</span>
+                From Dreaming to Doing:{" "}
+                <span className="text-[#D6B585]">Find Your Oasis</span>
               </h1>
-              
+
               {/* Tagline */}
               <p className="text-lg md:text-xl lg:text-2xl text-white mb-8 leading-relaxed max-w-2xl mx-auto drop-shadow-md slide-in-top">
-                Possibilities, hopes, vision, and collaboration. Your voice matters.
+                Possibilities, hopes, vision, and collaboration. Your voice
+                matters.
               </p>
-              
+
               {/* Call to Action Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center slide-in-bottom">
                 <Button
                   asChild
                   size="lg"
-                  className="bg-[#1C3163] hover:bg-[#D6B585] text-[#FEFFFF] shadow-xl hover:shadow-2xl transition-all text-base md:text-lg px-8 py-4 min-w-[200px] btn-hover hover-glow font-semibold focus:ring-4 focus:ring-[#1C3163]/30 focus:outline-none"
+                  className="bg-[#1C3163] hover:bg-[#1C3163]/90 text-[#FEFFFF] shadow-xl hover:shadow-2xl transition-all text-base md:text-lg px-8 py-4 min-w-[200px] btn-hover hover-glow font-semibold focus:ring-4 focus:ring-[#1C3163]/30 focus:outline-none"
                 >
                   <Link href="/about">
                     Explore Our Mission
@@ -69,8 +103,8 @@ export default function HomePage() {
                 <Button
                   asChild
                   size="lg"
-                  variant="outline"
-                  className="border-2 border-[#FEFFFF] text-[#FEFFFF] hover:bg-[#D6B585] hover:text-[#00071B] shadow-xl hover:shadow-2xl transition-all text-base md:text-lg px-8 py-4 min-w-[200px] font-semibold focus:ring-4 focus:ring-[#FEFFFF]/30 focus:outline-none"
+                  className="!bg-[#FEFFFF] hover:!bg-[#FEFFFF]/90 !text-[#1C3163] hover:!text-[#1C3163] hover:!border hover:!border-[#FEFFFF] shadow-xl hover:shadow-2xl transition-all text-base md:text-lg px-8 py-4 min-w-[200px] font-semibold focus:ring-4 focus:ring-[#FEFFFF]/30 focus:outline-none"
+                  style={{ backgroundColor: "#FEFFFF", color: "#1C3163" }}
                 >
                   <Link href="/communities">
                     Join a Group Today
@@ -86,34 +120,57 @@ export default function HomePage() {
         <section className="py-20 bg-[#FEFFFF]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div className="slide-in-left">
-                <h2 className="font-serif text-3xl md:text-4xl font-bold text-[#1C3163] mb-6">
+              <div className="slide-in-left group">
+                <h2 className="font-serif text-3xl md:text-4xl font-bold text-[#1C3163] mb-6 group-hover:text-[#D6B585] transition-colors duration-500">
                   What is Oasis & Mirage?
                 </h2>
                 <div className="space-y-4 text-[#00071B] text-lg leading-relaxed">
-                  <p>
-                    <strong className="text-[#1C3163]">Oasis</strong> is the place you are now - your current reality with resources and challenges, where you stand today with both opportunities and obstacles.
+                  <p className="group-hover:translate-x-2 transition-transform duration-500 delay-100">
+                    <strong className="text-[#1C3163] group-hover:text-[#D6B585] transition-colors duration-300">
+                      Oasis
+                    </strong>{" "}
+                    is the place you are now - your current reality with
+                    resources and challenges, where you stand today with both
+                    opportunities and obstacles.
                   </p>
-                  <p>
-                    <strong className="text-[#D6B585]">Mirage</strong> is the possibility you chase - your dreams, hopes, and the vision of what could be. It's the future you're reaching toward.
+                  <p className="group-hover:translate-x-2 transition-transform duration-500 delay-200">
+                    <strong className="text-[#D6B585] group-hover:text-[#1C3163] transition-colors duration-300">
+                      Mirage
+                    </strong>{" "}
+                    is the possibility you chase - your dreams, hopes, and the
+                    vision of what could be. It's the future you're reaching
+                    toward.
                   </p>
-                  <p className="text-[#1C3163] font-semibold">
-                    Together, they represent the journey from where you are to where you want to be.
+                  <p className="text-[#1C3163] font-semibold group-hover:translate-x-2 transition-transform duration-500 delay-300">
+                    Together, they represent the journey from where you are to
+                    where you want to be.
                   </p>
                 </div>
               </div>
-              <div className="slide-in-right">
-                <div className="bg-gradient-to-br from-[#1C3163]/10 to-[#D6B585]/10 p-8 rounded-2xl">
+              <div className="slide-in-right group">
+                <div className="bg-gradient-to-br from-[#1C3163]/10 to-[#D6B585]/10 p-8 rounded-2xl group-hover:shadow-2xl group-hover:scale-105 transition-all duration-500">
                   <div className="text-center">
-                    <div className="w-32 h-32 bg-[#1C3163] rounded-full flex items-center justify-center mx-auto mb-6">
-                      <CamelIcon className="h-16 w-16 text-[#FEFFFF]" />
+                    <div className="w-32 h-32 bg-[#1C3163] rounded-full flex items-center justify-center mx-auto mb-6 group-hover:rotate-12 group-hover:scale-110 transition-all duration-500">
+                      <CamelIcon className="h-16 w-16 text-[#FEFFFF] group-hover:animate-pulse" />
                     </div>
-                    <h3 className="font-serif text-2xl font-bold text-[#1C3163] mb-4">
+                    <h3 className="font-serif text-2xl font-bold text-[#1C3163] mb-4 group-hover:text-[#D6B585] transition-colors duration-300">
                       The Ship of the Desert: Our Symbol
                     </h3>
-                    <p className="text-[#00071B] text-lg leading-relaxed">
-                      The camel represents <strong className="text-[#1C3163]">endurance</strong>, <strong className="text-[#1C3163]">resilience</strong>, and <strong className="text-[#1C3163]">resourcefulness</strong>. 
-                      It carries truth and hope across life's deserts, just as we help you navigate your journey.
+                    <p className="text-[#00071B] text-lg leading-relaxed group-hover:text-[#1C3163] transition-colors duration-300">
+                      The camel represents{" "}
+                      <strong className="text-[#1C3163] group-hover:text-[#D6B585] transition-colors duration-300">
+                        endurance
+                      </strong>
+                      ,{" "}
+                      <strong className="text-[#1C3163] group-hover:text-[#D6B585] transition-colors duration-300">
+                        resilience
+                      </strong>
+                      , and{" "}
+                      <strong className="text-[#1C3163] group-hover:text-[#D6B585] transition-colors duration-300">
+                        resourcefulness
+                      </strong>
+                      . It carries truth and hope across life's deserts, just as
+                      we help you navigate your journey.
                     </p>
                   </div>
                 </div>
@@ -130,52 +187,62 @@ export default function HomePage() {
                 Facing Challenges Together
               </h2>
               <p className="text-xl text-[#00071B] max-w-3xl mx-auto slide-in-top">
-                We understand the struggles you face. Here's how we help you overcome them.
+                We understand the struggles you face. Here's how we help you
+                overcome them.
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <Card className="text-center hover-slide-up card-slide-left">
+              <Card className="text-center hover-slide-up card-slide-left group hover:shadow-2xl hover:scale-105 transition-all duration-500">
                 <CardHeader>
-                  <div className="w-16 h-16 bg-[#1C3163] rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Heart className="h-8 w-8 text-[#FEFFFF]" />
+                  <div className="w-16 h-16 bg-[#1C3163] rounded-full flex items-center justify-center mx-auto mb-4 group-hover:rotate-12 group-hover:scale-110 group-hover:bg-[#D6B585] transition-all duration-500">
+                    <Heart className="h-8 w-8 text-[#FEFFFF] group-hover:text-[#00071B] group-hover:animate-pulse transition-all duration-300" />
                   </div>
-                  <CardTitle className="text-[#1C3163] text-xl">Acceptance</CardTitle>
+                  <CardTitle className="text-[#1C3163] text-xl group-hover:text-[#D6B585] transition-colors duration-300">
+                    Acceptance
+                  </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-[#00071B] leading-relaxed">
-                    It's difficult to accept yourself and your current situation. We make it a safe place to begin your journey, 
+                  <p className="text-[#00071B] leading-relaxed group-hover:text-[#1C3163] transition-colors duration-300">
+                    It's difficult to accept yourself and your current
+                    situation. We make it a safe place to begin your journey,
                     where you're welcomed exactly as you are.
                   </p>
                 </CardContent>
               </Card>
 
-              <Card className="text-center hover-slide-up card-slide-top">
+              <Card className="text-center hover-slide-up card-slide-top group hover:shadow-2xl hover:scale-105 transition-all duration-500">
                 <CardHeader>
-                  <div className="w-16 h-16 bg-[#D6B585] rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Lightbulb className="h-8 w-8 text-[#00071B]" />
+                  <div className="w-16 h-16 bg-[#D6B585] rounded-full flex items-center justify-center mx-auto mb-4 group-hover:rotate-12 group-hover:scale-110 group-hover:bg-[#1C3163] transition-all duration-500">
+                    <Lightbulb className="h-8 w-8 text-[#00071B] group-hover:text-[#FEFFFF] group-hover:animate-bounce transition-all duration-300" />
                   </div>
-                  <CardTitle className="text-[#1C3163] text-xl">Transformation</CardTitle>
+                  <CardTitle className="text-[#1C3163] text-xl group-hover:text-[#D6B585] transition-colors duration-300">
+                    Transformation
+                  </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-[#00071B] leading-relaxed">
-                    Change is difficult but necessary for growth and betterment. We provide the support and tools you need 
-                    to transform challenges into opportunities.
+                  <p className="text-[#00071B] leading-relaxed group-hover:text-[#1C3163] transition-colors duration-300">
+                    Change is difficult but necessary for growth and betterment.
+                    We provide the support and tools you need to transform
+                    challenges into opportunities.
                   </p>
                 </CardContent>
               </Card>
 
-              <Card className="text-center hover-slide-up card-slide-right">
+              <Card className="text-center hover-slide-up card-slide-right group hover:shadow-2xl hover:scale-105 transition-all duration-500">
                 <CardHeader>
-                  <div className="w-16 h-16 bg-[#1C3163] rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Users className="h-8 w-8 text-[#FEFFFF]" />
+                  <div className="w-16 h-16 bg-[#1C3163] rounded-full flex items-center justify-center mx-auto mb-4 group-hover:rotate-12 group-hover:scale-110 group-hover:bg-[#D6B585] transition-all duration-500">
+                    <Users className="h-8 w-8 text-[#FEFFFF] group-hover:text-[#00071B] group-hover:animate-pulse transition-all duration-300" />
                   </div>
-                  <CardTitle className="text-[#1C3163] text-xl">Resources</CardTitle>
+                  <CardTitle className="text-[#1C3163] text-xl group-hover:text-[#D6B585] transition-colors duration-300">
+                    Resources
+                  </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-[#00071B] leading-relaxed">
-                    Finding the right help and resources can be overwhelming. We guide you to where to look and 
-                    how to access the support you need.
+                  <p className="text-[#00071B] leading-relaxed group-hover:text-[#1C3163] transition-colors duration-300">
+                    Finding the right help and resources can be overwhelming. We
+                    guide you to where to look and how to access the support you
+                    need.
                   </p>
                 </CardContent>
               </Card>
@@ -191,37 +258,44 @@ export default function HomePage() {
                 A Community for Everyone
               </h2>
               <p className="text-xl text-[#00071B] max-w-3xl mx-auto slide-in-top">
-                We welcome all who seek connection, growth, and support in their journey.
+                We welcome all who seek connection, growth, and support in their
+                journey.
               </p>
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              <Card className="hover-slide-up card-slide-left">
+              <Card className="hover-slide-up card-slide-left group hover:shadow-2xl hover:scale-105 transition-all duration-500">
                 <CardHeader>
-                  <div className="w-16 h-16 bg-[#D6B585] rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Heart className="h-8 w-8 text-[#00071B]" />
+                  <div className="w-16 h-16 bg-[#D6B585] rounded-full flex items-center justify-center mx-auto mb-4 group-hover:rotate-12 group-hover:scale-110 group-hover:bg-[#1C3163] transition-all duration-500">
+                    <Heart className="h-8 w-8 text-[#00071B] group-hover:text-[#FEFFFF] group-hover:animate-pulse transition-all duration-300" />
                   </div>
-                  <CardTitle className="text-[#1C3163] text-2xl text-center">Homemakers & Seniors</CardTitle>
+                  <CardTitle className="text-[#1C3163] text-2xl text-center group-hover:text-[#D6B585] transition-colors duration-300">
+                    Homemakers & Seniors
+                  </CardTitle>
                 </CardHeader>
                 <CardContent className="text-center">
-                  <p className="text-[#00071B] text-lg leading-relaxed">
-                    Creating hope and possibilities for those who have given so much to others. 
-                    We help you feel good about yourself and discover your own potential for leadership and growth.
+                  <p className="text-[#00071B] text-lg leading-relaxed group-hover:text-[#1C3163] transition-colors duration-300">
+                    Creating hope and possibilities for those who have given so
+                    much to others. We help you feel good about yourself and
+                    discover your own potential for leadership and growth.
                   </p>
                 </CardContent>
               </Card>
 
-              <Card className="hover-slide-up card-slide-right">
+              <Card className="hover-slide-up card-slide-right group hover:shadow-2xl hover:scale-105 transition-all duration-500">
                 <CardHeader>
-                  <div className="w-16 h-16 bg-[#1C3163] rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Users className="h-8 w-8 text-[#FEFFFF]" />
+                  <div className="w-16 h-16 bg-[#1C3163] rounded-full flex items-center justify-center mx-auto mb-4 group-hover:rotate-12 group-hover:scale-110 group-hover:bg-[#D6B585] transition-all duration-500">
+                    <Users className="h-8 w-8 text-[#FEFFFF] group-hover:text-[#00071B] group-hover:animate-bounce transition-all duration-300" />
                   </div>
-                  <CardTitle className="text-[#1C3163] text-2xl text-center">Global Village Citizens</CardTitle>
+                  <CardTitle className="text-[#1C3163] text-2xl text-center group-hover:text-[#D6B585] transition-colors duration-300">
+                    Global Village Citizens
+                  </CardTitle>
                 </CardHeader>
                 <CardContent className="text-center">
-                  <p className="text-[#00071B] text-lg leading-relaxed">
-                    Proud of your culture, ethnicity, and diversity. We celebrate intergenerational connections 
-                    and the rich tapestry of experiences that make our community stronger.
+                  <p className="text-[#00071B] text-lg leading-relaxed group-hover:text-[#1C3163] transition-colors duration-300">
+                    Proud of your culture, ethnicity, and diversity. We
+                    celebrate intergenerational connections and the rich
+                    tapestry of experiences that make our community stronger.
                   </p>
                 </CardContent>
               </Card>
@@ -236,17 +310,25 @@ export default function HomePage() {
               <h2 className="font-serif text-3xl md:text-4xl font-bold text-[#FEFFFF] mb-8 slide-in-top">
                 Power is the Ability to Act
               </h2>
-              
-              <div className="bg-[#1C3163]/20 p-8 rounded-2xl mb-8 slide-in-top">
-                <blockquote className="text-xl md:text-2xl text-[#FEFFFF] leading-relaxed mb-6">
-                  "Your desire to do something... shows that you have the power and ability to bring change."
+
+              <div className="bg-[#1C3163]/20 p-8 rounded-2xl mb-8 slide-in-top group hover:shadow-2xl hover:scale-105 transition-all duration-500">
+                <blockquote className="text-xl md:text-2xl text-[#FEFFFF] leading-relaxed mb-6 group-hover:text-[#D6B585] transition-colors duration-300">
+                  "Your desire to do something... shows that you have the power
+                  and ability to bring change."
                 </blockquote>
               </div>
 
-              <div className="space-y-6 text-[#D6B585] text-lg leading-relaxed mb-8 slide-in-top">
-                <p>• Be whatever you want to be, exhale, and be a leader by learning to organize with us.</p>
-                <p>• Know that you have a voice and that you can be heard.</p>
-                <p>• This is for you, your family, and our community.</p>
+              <div className="space-y-6 text-[#D6B585] text-lg leading-relaxed mb-8 slide-in-top group">
+                <p className="group-hover:translate-x-2 transition-transform duration-500 delay-100">
+                  • Be whatever you want to be, exhale, and be a leader by
+                  learning to organize with us.
+                </p>
+                <p className="group-hover:translate-x-2 transition-transform duration-500 delay-200">
+                  • Know that you have a voice and that you can be heard.
+                </p>
+                <p className="group-hover:translate-x-2 transition-transform duration-500 delay-300">
+                  • This is for you, your family, and our community.
+                </p>
               </div>
 
               <Button
@@ -267,43 +349,51 @@ export default function HomePage() {
         <section className="py-16 bg-[#FEFFFF] border-t border-[#D6B585]/20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="text-center slide-in-left">
-                <div className="w-16 h-16 bg-[#1C3163] rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Shield className="h-8 w-8 text-[#FEFFFF]" />
+              <div className="text-center slide-in-left group hover:scale-105 transition-all duration-500">
+                <div className="w-16 h-16 bg-[#1C3163] rounded-full flex items-center justify-center mx-auto mb-4 group-hover:rotate-12 group-hover:scale-110 group-hover:bg-[#D6B585] transition-all duration-500">
+                  <Shield className="h-8 w-8 text-[#FEFFFF] group-hover:text-[#00071B] group-hover:animate-pulse transition-all duration-300" />
                 </div>
-                <h3 className="font-serif text-xl font-bold text-[#1C3163] mb-4">Integrity Promise</h3>
-                <p className="text-[#00071B] leading-relaxed">
-                  We are committed to <strong>INTEGRITY</strong>, trust, and participant privacy. 
-                  Your journey with us is sacred and protected.
+                <h3 className="font-serif text-xl font-bold text-[#1C3163] mb-4 group-hover:text-[#D6B585] transition-colors duration-300">
+                  Integrity Promise
+                </h3>
+                <p className="text-[#00071B] leading-relaxed group-hover:text-[#1C3163] transition-colors duration-300">
+                  We are committed to{" "}
+                  <strong className="group-hover:text-[#D6B585] transition-colors duration-300">
+                    INTEGRITY
+                  </strong>
+                  , trust, and participant privacy. Your journey with us is
+                  sacred and protected.
                 </p>
               </div>
 
-              <div className="text-center slide-in-top">
-                <div className="w-16 h-16 bg-[#D6B585] rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Heart className="h-8 w-8 text-[#00071B]" />
+              <div className="text-center slide-in-top group hover:scale-105 transition-all duration-500">
+                <div className="w-16 h-16 bg-[#D6B585] rounded-full flex items-center justify-center mx-auto mb-4 group-hover:rotate-12 group-hover:scale-110 group-hover:bg-[#1C3163] transition-all duration-500">
+                  <Heart className="h-8 w-8 text-[#00071B] group-hover:text-[#FEFFFF] group-hover:animate-bounce transition-all duration-300" />
                 </div>
-                <h3 className="font-serif text-xl font-bold text-[#1C3163] mb-4">Easy Donation</h3>
-                <p className="text-[#00071B] leading-relaxed mb-4">
+                <h3 className="font-serif text-xl font-bold text-[#1C3163] mb-4 group-hover:text-[#D6B585] transition-colors duration-300">
+                  Easy Donation
+                </h3>
+                <p className="text-[#00071B] leading-relaxed mb-4 group-hover:text-[#1C3163] transition-colors duration-300">
                   Support our mission with a simple, secure donation process.
                 </p>
                 <Button
                   asChild
-                  className="bg-[#1C3163] hover:bg-[#D6B585] text-[#FEFFFF] hover:text-[#00071B]"
+                  className="bg-[#1C3163] hover:bg-[#D6B585] text-[#FEFFFF] hover:text-[#00071B] group-hover:scale-110 transition-all duration-300"
                 >
-                  <Link href="/contribute">
-                    Support Oasis & Mirage
-                  </Link>
+                  <Link href="/contribute">Support Oasis & Mirage</Link>
                 </Button>
               </div>
 
-              <div className="text-center slide-in-right">
-                <div className="w-16 h-16 bg-[#1C3163] rounded-full flex items-center justify-center mx-auto mb-4">
-                  <CheckCircle className="h-8 w-8 text-[#FEFFFF]" />
+              <div className="text-center slide-in-right group hover:scale-105 transition-all duration-500">
+                <div className="w-16 h-16 bg-[#1C3163] rounded-full flex items-center justify-center mx-auto mb-4 group-hover:rotate-12 group-hover:scale-110 group-hover:bg-[#D6B585] transition-all duration-500">
+                  <CheckCircle className="h-8 w-8 text-[#FEFFFF] group-hover:text-[#00071B] group-hover:animate-pulse transition-all duration-300" />
                 </div>
-                <h3 className="font-serif text-xl font-bold text-[#1C3163] mb-4">Accessibility</h3>
-                <p className="text-[#00071B] leading-relaxed">
-                  Our website is designed for easy access and navigation, especially for those 
-                  who are not technically experienced.
+                <h3 className="font-serif text-xl font-bold text-[#1C3163] mb-4 group-hover:text-[#D6B585] transition-colors duration-300">
+                  Accessibility
+                </h3>
+                <p className="text-[#00071B] leading-relaxed group-hover:text-[#1C3163] transition-colors duration-300">
+                  Our website is designed for easy access and navigation,
+                  especially for those who are not technically experienced.
                 </p>
               </div>
             </div>
@@ -324,5 +414,5 @@ export default function HomePage() {
         </section>
       </div>
     </AnimationWrapper>
-  )
+  );
 }
