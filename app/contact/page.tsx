@@ -259,8 +259,8 @@ export default function ContactPage() {
                       <Button
                         type="submit"
                         size="lg"
-                        className="w-full !bg-[#D6B585] hover:!bg-[#FEFFFF] !text-[#00071B] hover:!text-[#00071B] shadow-xl hover:shadow-2xl transition-all btn-hover hover-glow font-semibold focus:ring-4 focus:ring-[#D6B585]/30"
-                        style={{ backgroundColor: "#D6B585", color: "#00071B" }}
+                        className="w-full !bg-[#1C3163] hover:!bg-[#1C3163] !text-[#FEFFFF] hover:!text-[#FEFFFF] shadow-xl hover:shadow-2xl transition-all btn-hover hover-glow font-semibold focus:ring-4 focus:ring-[#1C3163]/30"
+                        style={{ backgroundColor: "#1C3163", color: "#FEFFFF" }}
                       >
                         <Send className="h-5 w-5 mr-2" />
                         Send Message
@@ -399,7 +399,7 @@ export default function ContactPage() {
                     </p>
                     <Button
                       size="lg"
-                      className="bg-[#00071B] hover:bg-[#D6B585] text-[#FEFFFF] hover:text-[#00071B] shadow-xl hover:shadow-2xl transition-all btn-hover hover-glow font-semibold focus:ring-4 focus:ring-[#00071B]/30"
+                      className="bg-black hover:bg-black text-[#FEFFFF] hover:text-[#FEFFFF] shadow-xl hover:shadow-2xl transition-all btn-hover hover-glow font-semibold focus:ring-4 focus:ring-black/30"
                     >
                       <Phone className="h-5 w-5 mr-2" />
                       Call Now

@@ -334,7 +334,7 @@ export default function HomePage() {
               <Button
                 asChild
                 size="lg"
-                className="bg-[#1C3163] hover:bg-[#D6B585] text-[#FEFFFF] hover:text-[#00071B] shadow-xl hover:shadow-2xl transition-all text-lg px-8 py-4 btn-hover hover-glow font-semibold focus:ring-4 focus:ring-[#1C3163]/30 focus:outline-none slide-in-bottom"
+                className="bg-[#1C3163] hover:bg-[#1C3163] text-[#FEFFFF] hover:text-[#FEFFFF] shadow-xl hover:shadow-2xl transition-all text-lg px-8 py-4 btn-hover hover-glow font-semibold focus:ring-4 focus:ring-[#1C3163]/30 focus:outline-none slide-in-bottom"
               >
                 <Link href="/communities">
                   See How to Join a Group
@@ -378,7 +378,7 @@ export default function HomePage() {
                 </p>
                 <Button
                   asChild
-                  className="bg-[#1C3163] hover:bg-[#D6B585] text-[#FEFFFF] hover:text-[#00071B] group-hover:scale-110 transition-all duration-300"
+                  className="bg-[#1C3163] hover:bg-[#1C3163] text-[#FEFFFF] hover:text-[#FEFFFF] shadow-xl hover:shadow-2xl transition-all text-lg px-8 py-4 btn-hover hover-glow font-semibold focus:ring-4 focus:ring-[#1C3163]/30 focus:outline-none group-hover:scale-110"
                 >
                   <Link href="/contribute">Support Oasis & Mirage</Link>
                 </Button>
