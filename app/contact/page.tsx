@@ -259,7 +259,7 @@ export default function ContactPage() {
                       <Button
                         type="submit"
                         size="lg"
-                        className="w-full !bg-[#1C3163] hover:!bg-[#1C3163] !text-[#FEFFFF] hover:!text-[#FEFFFF] shadow-xl hover:shadow-2xl transition-all btn-hover hover-glow font-semibold focus:ring-4 focus:ring-[#1C3163]/30"
+                        className="w-full !bg-[#1C3163] hover:!bg-[#1C3163] !text-[#FEFFFF] hover:!text-[#FEFFFF] shadow-xl hover:shadow-2xl transition-all btn-hover hover-glow font-semibold focus:ring-4 focus:ring-[#1C3163]/30 hover:scale-105"
                         style={{ backgroundColor: "#1C3163", color: "#FEFFFF" }}
                       >
                         <Send className="h-5 w-5 mr-2" />
@@ -395,11 +395,11 @@ export default function ContactPage() {
                       Call Us Now
                     </h3>
                     <p className="text-[#FEFFFF] mb-6 group-hover:text-[#FEFFFF] transition-colors duration-300">
-                      Speak directly with our team for immediate assistance
+                      We’re here to help — reach out anytime.
                     </p>
                     <Button
                       size="lg"
-                      className="bg-black hover:bg-black text-[#FEFFFF] hover:text-[#FEFFFF] shadow-xl hover:shadow-2xl transition-all btn-hover hover-glow font-semibold focus:ring-4 focus:ring-black/30"
+                      className="bg-black hover:bg-black text-[#FEFFFF] hover:text-[#FEFFFF] shadow-xl hover:shadow-2xl transition-all btn-hover hover-glow font-semibold focus:ring-4 focus:ring-black/30 hover:scale-105"
                     >
                       <Phone className="h-5 w-5 mr-2" />
                       Call Now
@@ -420,7 +420,7 @@ export default function ContactPage() {
                     </p>
                     <Button
                       size="lg"
-                      className="bg-[#25D366] hover:bg-[#128C7E] text-[#FEFFFF] shadow-xl hover:shadow-2xl transition-all btn-hover hover-glow font-semibold focus:ring-4 focus:ring-[#25D366]/30"
+                      className="bg-[#25D366] hover:bg-[#128C7E] text-[#FEFFFF] shadow-xl hover:shadow-2xl transition-all btn-hover hover-glow font-semibold focus:ring-4 focus:ring-[#25D366]/30 hover:scale-105"
                     >
                       <MessageCircle className="h-5 w-5 mr-2" />
                       WhatsApp
@@ -445,7 +445,7 @@ export default function ContactPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center slide-in-bottom">
               <Button
                 size="lg"
-                className="bg-[#1C3163] hover:bg-[#1C3163]/90 text-[#FEFFFF] hover:text-[#FEFFFF] shadow-xl hover:shadow-2xl transition-all text-lg px-8 py-4 btn-hover hover-glow font-semibold focus:ring-4 focus:ring-[#1C3163]/30 focus:outline-none"
+                className="bg-[#1C3163] hover:bg-[#1C3163]/90 text-[#FEFFFF] hover:text-[#FEFFFF] shadow-xl hover:shadow-2xl transition-all text-lg px-8 py-4 btn-hover hover-glow font-semibold focus:ring-4 focus:ring-[#1C3163]/30 focus:outline-none hover:scale-105"
                 onClick={() =>
                   document
                     .getElementById("contact-form")
@@ -458,7 +458,7 @@ export default function ContactPage() {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-2 border-[#1C3163] text-[#1C3163] hover:bg-[#1C3163] hover:text-[#FEFFFF] shadow-xl hover:shadow-2xl transition-all text-lg px-8 py-4 font-semibold"
+                className="border-2 border-[#1C3163] text-[#1C3163] hover:bg-[#1C3163] hover:text-[#FEFFFF] shadow-xl hover:shadow-2xl transition-all text-lg px-8 py-4 font-semibold hover:scale-105"
                 onClick={() =>
                   document
                     .getElementById("contact-info")

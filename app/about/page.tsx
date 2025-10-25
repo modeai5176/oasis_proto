@@ -297,7 +297,7 @@ export default function AboutPage() {
               <Button
                 asChild
                 size="lg"
-                className="bg-[#1C3163] hover:bg-[#1C3163]/90 text-[#FEFFFF] hover:text-[#FEFFFF] shadow-xl hover:shadow-2xl transition-all text-lg px-8 py-4 btn-hover hover-glow font-semibold focus:ring-4 focus:ring-[#1C3163]/30 focus:outline-none"
+                className="bg-[#1C3163] hover:bg-[#1C3163]/90 text-[#FEFFFF] hover:text-[#FEFFFF] shadow-xl hover:shadow-2xl transition-all text-lg px-8 py-4 btn-hover hover-glow font-semibold focus:ring-4 focus:ring-[#1C3163]/30 focus:outline-none hover:scale-105"
               >
                 <Link href="/communities">
                   Join a Group Today
@@ -308,7 +308,7 @@ export default function AboutPage() {
                 asChild
                 size="lg"
                 variant="outline"
-                className="border-2 border-[#1C3163] text-[#1C3163] hover:bg-[#1C3163] hover:text-[#FEFFFF] shadow-xl hover:shadow-2xl transition-all text-lg px-8 py-4 font-semibold"
+                className="border-2 border-[#1C3163] text-[#1C3163] hover:bg-[#1C3163] hover:text-[#FEFFFF] shadow-xl hover:shadow-2xl transition-all text-lg px-8 py-4 font-semibold hover:scale-105"
               >
                 <Link href="/contribute">Support Our Mission</Link>
               </Button>

@@ -93,7 +93,7 @@ export default function HomePage() {
                 <Button
                   asChild
                   size="lg"
-                  className="bg-[#1C3163] hover:bg-[#1C3163]/90 text-[#FEFFFF] shadow-xl hover:shadow-2xl transition-all text-base md:text-lg px-8 py-4 min-w-[200px] btn-hover hover-glow font-semibold focus:ring-4 focus:ring-[#1C3163]/30 focus:outline-none"
+                  className="bg-[#1C3163] hover:bg-[#1C3163]/90 text-[#FEFFFF] shadow-xl hover:shadow-2xl transition-all text-base md:text-lg px-8 py-4 min-w-[200px] btn-hover hover-glow font-semibold focus:ring-4 focus:ring-[#1C3163]/30 focus:outline-none hover:scale-105"
                 >
                   <Link href="/about">
                     Explore Our Mission
@@ -103,7 +103,7 @@ export default function HomePage() {
                 <Button
                   asChild
                   size="lg"
-                  className="!bg-[#FEFFFF] hover:!bg-[#FEFFFF]/90 !text-[#1C3163] hover:!text-[#1C3163] hover:!border hover:!border-[#FEFFFF] shadow-xl hover:shadow-2xl transition-all text-base md:text-lg px-8 py-4 min-w-[200px] font-semibold focus:ring-4 focus:ring-[#FEFFFF]/30 focus:outline-none"
+                  className="!bg-[#FEFFFF] hover:!bg-[#FEFFFF]/90 !text-[#1C3163] hover:!text-[#1C3163] hover:!border hover:!border-[#FEFFFF] shadow-xl hover:shadow-2xl transition-all text-base md:text-lg px-8 py-4 min-w-[200px] font-semibold focus:ring-4 focus:ring-[#FEFFFF]/30 focus:outline-none hover:scale-105"
                   style={{ backgroundColor: "#FEFFFF", color: "#1C3163" }}
                 >
                   <Link href="/communities">
@@ -334,7 +334,7 @@ export default function HomePage() {
               <Button
                 asChild
                 size="lg"
-                className="bg-[#1C3163] hover:bg-[#1C3163] text-[#FEFFFF] hover:text-[#FEFFFF] shadow-xl hover:shadow-2xl transition-all text-lg px-8 py-4 btn-hover hover-glow font-semibold focus:ring-4 focus:ring-[#1C3163]/30 focus:outline-none slide-in-bottom"
+                className="bg-[#1C3163] hover:bg-[#1C3163] text-[#FEFFFF] hover:text-[#FEFFFF] shadow-xl hover:shadow-2xl transition-all text-lg px-8 py-4 btn-hover hover-glow font-semibold focus:ring-4 focus:ring-[#1C3163]/30 focus:outline-none slide-in-bottom hover:scale-105"
               >
                 <Link href="/communities">
                   See How to Join a Group
@@ -378,7 +378,7 @@ export default function HomePage() {
                 </p>
                 <Button
                   asChild
-                  className="bg-[#1C3163] hover:bg-[#1C3163] text-[#FEFFFF] hover:text-[#FEFFFF] shadow-xl hover:shadow-2xl transition-all text-lg px-8 py-4 btn-hover hover-glow font-semibold focus:ring-4 focus:ring-[#1C3163]/30 focus:outline-none group-hover:scale-110"
+                  className="bg-[#1C3163] hover:bg-[#1C3163] text-[#FEFFFF] hover:text-[#FEFFFF] shadow-xl hover:shadow-2xl transition-all text-lg px-8 py-4 btn-hover hover-glow font-semibold focus:ring-4 focus:ring-[#1C3163]/30 focus:outline-none group-hover:scale-110 hover:scale-105"
                 >
                   <Link href="/contribute">Support Oasis & Mirage</Link>
                 </Button>

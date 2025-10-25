@@ -89,7 +89,7 @@ export default function ContributePage() {
                 <Button
                   asChild
                   size="lg"
-                  className="bg-[#1C3163] hover:bg-[#1C3163]/90 text-[#FEFFFF] shadow-xl hover:shadow-2xl transition-all text-base md:text-lg px-8 py-4 min-w-[200px] btn-hover hover-glow font-semibold focus:ring-4 focus:ring-[#1C3163]/30 focus:outline-none"
+                  className="bg-[#1C3163] hover:bg-[#1C3163]/90 text-[#FEFFFF] shadow-xl hover:shadow-2xl transition-all text-base md:text-lg px-8 py-4 min-w-[200px] btn-hover hover-glow font-semibold focus:ring-4 focus:ring-[#1C3163]/30 focus:outline-none hover:scale-105"
                 >
                   <Link href="#donate">
                     Donate Now
@@ -216,7 +216,7 @@ export default function ContributePage() {
                     </Button>
                   </div>
                   <div className="mt-auto space-y-3">
-                    <Button className="w-full bg-[#1C3163] hover:bg-[#1C3163]/90 text-white py-3">
+                    <Button className="w-full bg-[#1C3163] hover:bg-[#1C3163]/90 text-white py-3 hover:scale-105">
                       Donate with PayPal
                     </Button>
                     <p className="text-xs text-gray-500">
@@ -251,7 +251,7 @@ export default function ContributePage() {
                     <p className="text-sm text-[#1C3163]">Account: OASIS2024</p>
                   </div>
                   <div className="mt-auto space-y-3">
-                    <Button className="w-full bg-[#1C3163] hover:bg-[#1C3163]/90 text-white py-3">
+                    <Button className="w-full bg-[#1C3163] hover:bg-[#1C3163]/90 text-white py-3 hover:scale-105">
                       Send via M-Pesa
                     </Button>
                     <p className="text-xs text-gray-500">
@@ -296,7 +296,7 @@ export default function ContributePage() {
                     </p>
                   </div>
                   <div className="mt-auto space-y-3">
-                    <Button className="w-full bg-[#D6B585] hover:bg-[#D6B585]/90 text-[#00071B] py-3">
+                    <Button className="w-full bg-[#D6B585] hover:bg-[#D6B585]/90 text-[#00071B] py-3 hover:scale-105">
                       Donate on GoFundMe
                     </Button>
                     <p className="text-xs text-gray-500">
@@ -339,7 +339,7 @@ export default function ContributePage() {
                   </CardDescription>
                   <Button
                     variant="outline"
-                    className="border-[#D6B585] text-[#D6B585] hover:bg-[#D6B585]/10 bg-transparent"
+                    className="border-[#D6B585] text-[#D6B585] hover:bg-[#D6B585]/10 bg-transparent hover:scale-105"
                   >
                     Learn More
                   </Button>
@@ -362,7 +362,7 @@ export default function ContributePage() {
                   </CardDescription>
                   <Button
                     variant="outline"
-                    className="border-[#FEFFFF] text-[#FEFFFF] hover:bg-[#FEFFFF]/10 bg-transparent"
+                    className="border-[#FEFFFF] text-[#FEFFFF] hover:bg-[#FEFFFF]/10 bg-transparent hover:scale-105"
                   >
                     Share Now
                   </Button>
@@ -385,7 +385,7 @@ export default function ContributePage() {
                   </CardDescription>
                   <Button
                     variant="outline"
-                    className="border-[#D6B585] text-[#D6B585] hover:bg-[#D6B585]/10 bg-transparent"
+                    className="border-[#D6B585] text-[#D6B585] hover:bg-[#D6B585]/10 bg-transparent hover:scale-105"
                   >
                     Contact Us
                   </Button>
@@ -408,7 +408,7 @@ export default function ContributePage() {
                   </CardDescription>
                   <Button
                     variant="outline"
-                    className="border-[#FEFFFF] text-[#FEFFFF] hover:bg-[#FEFFFF]/10 bg-transparent"
+                    className="border-[#FEFFFF] text-[#FEFFFF] hover:bg-[#FEFFFF]/10 bg-transparent hover:scale-105"
                   >
                     Offer Skills
                   </Button>
@@ -489,7 +489,7 @@ export default function ContributePage() {
             <Button
               asChild
               size="lg"
-              className="bg-[#1C3163] hover:bg-[#1C3163]/90 text-[#FEFFFF] hover:text-[#FEFFFF] shadow-xl hover:shadow-2xl transition-all text-lg px-8 py-4 btn-hover hover-glow font-semibold focus:ring-4 focus:ring-[#1C3163]/30 focus:outline-none slide-in-bottom"
+              className="bg-[#1C3163] hover:bg-[#1C3163]/90 text-[#FEFFFF] hover:text-[#FEFFFF] shadow-xl hover:shadow-2xl transition-all text-lg px-8 py-4 btn-hover hover-glow font-semibold focus:ring-4 focus:ring-[#1C3163]/30 focus:outline-none slide-in-bottom hover:scale-105"
             >
               <Link href="#donate">Make Your Donation Today</Link>
             </Button>
