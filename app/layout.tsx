@@ -1,49 +1,53 @@
-import type React from "react"
-import type { Metadata } from "next"
-import { DM_Sans } from "next/font/google"
-import "./globals.css"
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
-import { PerformanceMonitor } from "@/app/components/performance-monitor"
-import { ErrorBoundary } from "@/app/components/error-boundary"
+import type React from "react";
+import type { Metadata } from "next";
+import { DM_Sans } from "next/font/google";
+import "./globals.css";
+import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
+import { PerformanceMonitor } from "@/app/components/performance-monitor";
+import { ErrorBoundary } from "@/app/components/error-boundary";
+import { BackToTop } from "@/components/back-to-top";
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
   variable: "--font-dm-sans",
   display: "swap",
-})
+});
 
 export const metadata: Metadata = {
   title: "Oasis & Mirage - From Mirage to Community",
   description:
     "Strengthening communities by fostering connection, resilience, and shared growth. We create spaces of refuge and renewal where individuals come together to support one another, access resources, and transform challenges into opportunities.",
-  keywords: "nonprofit, community, connection, resilience, shared growth, social impact, oasis, mirage, community building",
-  generator: 'v0.app',
-  authors: [{ name: 'Oasis & Mirage' }],
-  creator: 'Oasis & Mirage',
-  publisher: 'Oasis & Mirage',
+  keywords:
+    "nonprofit, community, connection, resilience, shared growth, social impact, oasis, mirage, community building",
+  generator: "v0.app",
+  authors: [{ name: "Oasis & Mirage" }],
+  creator: "Oasis & Mirage",
+  publisher: "Oasis & Mirage",
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://oasismirage.org'),
+  metadataBase: new URL("https://oasismirage.org"),
   alternates: {
-    canonical: '/',
+    canonical: "/",
   },
   openGraph: {
     title: "Oasis & Mirage - From Mirage to Community",
-    description: "Strengthening communities by fostering connection, resilience, and shared growth.",
-    url: 'https://oasismirage.org',
-    siteName: 'Oasis & Mirage',
-    locale: 'en_US',
-    type: 'website',
+    description:
+      "Strengthening communities by fostering connection, resilience, and shared growth.",
+    url: "https://oasismirage.org",
+    siteName: "Oasis & Mirage",
+    locale: "en_US",
+    type: "website",
   },
   twitter: {
-    card: 'summary_large_image',
+    card: "summary_large_image",
     title: "Oasis & Mirage - From Mirage to Community",
-    description: "Strengthening communities by fostering connection, resilience, and shared growth.",
+    description:
+      "Strengthening communities by fostering connection, resilience, and shared growth.",
   },
   robots: {
     index: true,
@@ -51,20 +55,20 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
   verification: {
-    google: 'your-google-verification-code',
+    google: "your-google-verification-code",
   },
-}
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en" className={`${dmSans.variable}`}>
@@ -79,10 +83,13 @@ export default function RootLayout({
         <PerformanceMonitor />
         <ErrorBoundary>
           <Header />
-          <main id="main-content" className="flex-1">{children}</main>
+          <main id="main-content" className="flex-1">
+            {children}
+          </main>
           <Footer />
+          <BackToTop />
         </ErrorBoundary>
       </body>
     </html>
-  )
+  );
 }

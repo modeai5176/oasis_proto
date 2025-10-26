@@ -1,17 +1,41 @@
-"use client"
+"use client";
 
-import Image from "next/image"
-import Link from "next/link"
-import { MapPin, Users, Calendar, ArrowRight, Heart, CheckCircle, MessageCircle, Video, Phone } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { AnimationWrapper } from "@/app/components/animation-wrapper"
+import Image from "next/image";
+import Link from "next/link";
+import {
+  MapPin,
+  Users,
+  Calendar,
+  ArrowRight,
+  Heart,
+  CheckCircle,
+  MessageCircle,
+  Video,
+  Phone,
+} from "lucide-react";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { AnimationWrapper } from "@/app/components/animation-wrapper";
+import { SiteBreadcrumb } from "@/components/breadcrumb";
+import { breadcrumbConfigs } from "@/components/breadcrumb";
 
 export default function CommunitiesPage() {
   return (
     <AnimationWrapper>
       <div className="min-h-screen">
+        {/* Breadcrumb Navigation */}
+        <div className="bg-[#00071B] border-b border-[#2D8C7E] shadow-lg">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <SiteBreadcrumb items={breadcrumbConfigs.communities} />
+          </div>
+        </div>
         {/* Hero Section */}
         <section className="relative h-screen flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0 z-0">
@@ -25,9 +49,17 @@ export default function CommunitiesPage() {
               x5-playsinline="true"
               x5-video-player-type="h5"
               x5-video-player-fullscreen="false"
-              className="object-cover w-full h-full"
+              className="object-cover w-full h-full transition-opacity duration-1000 ease-in-out"
               poster="/images/video-poster.jpg"
-              style={{ objectFit: 'cover' }}
+              style={{ objectFit: "cover" }}
+              onEnded={(e) => {
+                e.currentTarget.style.opacity = "0.8";
+                setTimeout(() => {
+                  e.currentTarget.currentTime = 0;
+                  e.currentTarget.play();
+                  e.currentTarget.style.opacity = "1";
+                }, 100);
+              }}
             >
               <source src="/desert.mp4" type="video/mp4" />
               Your browser does not support the video tag.
@@ -35,18 +67,40 @@ export default function CommunitiesPage() {
             <div className="absolute inset-0 bg-gradient-to-b from-[#00071B]/40 to-transparent"></div>
           </div>
 
-          <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="font-serif text-5xl md:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-lg slide-in-top">
-              Join a Group Today
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-100 mb-8 leading-relaxed drop-shadow-md slide-in-top">
-              What is a group, and how do I join? Find your community and start your journey.
-            </p>
-            <Button asChild size="lg" className="bg-[#1C3163] hover:bg-[#D6B585] text-[#FEFFFF] shadow-xl text-lg px-6 py-4 slide-in-bottom">
-              <Link href="#how-it-works">
-                Learn How to Join <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
+          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div className="max-w-4xl mx-auto">
+              {/* Site Identity - Users Symbol */}
+              <div className="mb-8 slide-in-top">
+                <div className="w-24 h-24 bg-[#D6B585] rounded-full flex items-center justify-center mx-auto mb-6 shadow-2xl">
+                  <Users className="h-12 w-12 text-[#1C3163]" />
+                </div>
+              </div>
+
+              {/* Core Message */}
+              <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-lg slide-in-top">
+                Join a Group <span className="text-[#D6B585]">Today</span>
+              </h1>
+
+              {/* Tagline */}
+              <p className="text-lg md:text-xl lg:text-2xl text-white mb-8 leading-relaxed max-w-2xl mx-auto drop-shadow-md slide-in-top">
+                What is a group, and how do I join? Find your community and
+                start your journey.
+              </p>
+
+              {/* Call to Action Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4 justify-center slide-in-bottom">
+                <Button
+                  asChild
+                  size="lg"
+                  className="bg-[#1C3163] hover:bg-[#1C3163]/90 text-[#FEFFFF] hover:text-[#FEFFFF] shadow-xl hover:shadow-2xl transition-all text-base md:text-lg px-8 py-4 min-w-[200px] btn-hover hover-glow font-semibold focus:ring-4 focus:ring-[#1C3163]/30 focus:outline-none hover:scale-105"
+                >
+                  <Link href="#how-it-works">
+                    Learn How to Join
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Link>
+                </Button>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -58,52 +112,60 @@ export default function CommunitiesPage() {
                 What is a Group?
               </h2>
               <p className="text-xl text-[#00071B] max-w-3xl mx-auto slide-in-top">
-                A typical meeting includes Zoom, WhatsApp, and in-person monthly gatherings with welcoming icebreakers and community agreements.
+                A typical meeting includes Zoom, WhatsApp, and in-person monthly
+                gatherings with welcoming icebreakers and community agreements.
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <Card className="text-center hover-slide-up card-slide-left">
+              <Card className="text-center hover-slide-up card-slide-left group hover:shadow-2xl hover:scale-105 transition-all duration-500">
                 <CardHeader>
-                  <div className="w-16 h-16 bg-[#1C3163] rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Video className="h-8 w-8 text-[#FEFFFF]" />
+                  <div className="w-16 h-16 bg-[#1C3163] rounded-full flex items-center justify-center mx-auto mb-4 group-hover:rotate-12 group-hover:scale-110 group-hover:bg-[#D6B585] transition-all duration-500">
+                    <Video className="h-8 w-8 text-[#FEFFFF] group-hover:text-[#00071B] group-hover:animate-pulse transition-all duration-300" />
                   </div>
-                  <CardTitle className="text-[#1C3163] text-xl">Zoom Meetings</CardTitle>
+                  <CardTitle className="text-[#1C3163] text-xl group-hover:text-[#D6B585] transition-colors duration-300">
+                    Zoom Meetings
+                  </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-[#00071B] leading-relaxed">
-                    Regular online gatherings where you can connect with others from the comfort of your home, 
-                    no matter where you are.
+                  <p className="text-[#00071B] leading-relaxed group-hover:text-[#1C3163] transition-colors duration-300">
+                    Regular online gatherings where you can connect with others
+                    from the comfort of your home, no matter where you are.
                   </p>
                 </CardContent>
               </Card>
 
-              <Card className="text-center hover-slide-up card-slide-top">
+              <Card className="text-center hover-slide-up card-slide-top group hover:shadow-2xl hover:scale-105 transition-all duration-500">
                 <CardHeader>
-                  <div className="w-16 h-16 bg-[#D6B585] rounded-full flex items-center justify-center mx-auto mb-4">
-                    <MessageCircle className="h-8 w-8 text-[#00071B]" />
+                  <div className="w-16 h-16 bg-[#D6B585] rounded-full flex items-center justify-center mx-auto mb-4 group-hover:rotate-12 group-hover:scale-110 group-hover:bg-[#1C3163] transition-all duration-500">
+                    <MessageCircle className="h-8 w-8 text-[#00071B] group-hover:text-[#FEFFFF] group-hover:animate-bounce transition-all duration-300" />
                   </div>
-                  <CardTitle className="text-[#1C3163] text-xl">WhatsApp Community</CardTitle>
+                  <CardTitle className="text-[#1C3163] text-xl group-hover:text-[#D6B585] transition-colors duration-300">
+                    WhatsApp Community
+                  </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-[#00071B] leading-relaxed">
-                    Stay connected through our WhatsApp groups where you can share updates, 
-                    ask questions, and support each other daily.
+                  <p className="text-[#00071B] leading-relaxed group-hover:text-[#1C3163] transition-colors duration-300">
+                    Stay connected through our WhatsApp groups where you can
+                    share updates, ask questions, and support each other daily.
                   </p>
                 </CardContent>
               </Card>
 
-              <Card className="text-center hover-slide-up card-slide-right">
+              <Card className="text-center hover-slide-up card-slide-right group hover:shadow-2xl hover:scale-105 transition-all duration-500">
                 <CardHeader>
-                  <div className="w-16 h-16 bg-[#1C3163] rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Users className="h-8 w-8 text-[#FEFFFF]" />
+                  <div className="w-16 h-16 bg-[#1C3163] rounded-full flex items-center justify-center mx-auto mb-4 group-hover:rotate-12 group-hover:scale-110 group-hover:bg-[#D6B585] transition-all duration-500">
+                    <Users className="h-8 w-8 text-[#FEFFFF] group-hover:text-[#00071B] group-hover:animate-pulse transition-all duration-300" />
                   </div>
-                  <CardTitle className="text-[#1C3163] text-xl">In-Person Monthly</CardTitle>
+                  <CardTitle className="text-[#1C3163] text-xl group-hover:text-[#D6B585] transition-colors duration-300">
+                    In-Person Monthly
+                  </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-[#00071B] leading-relaxed">
-                    Monthly face-to-face meetings where we build deeper connections and 
-                    create lasting friendships in your local community.
+                  <p className="text-[#00071B] leading-relaxed group-hover:text-[#1C3163] transition-colors duration-300">
+                    Monthly face-to-face meetings where we build deeper
+                    connections and create lasting friendships in your local
+                    community.
                   </p>
                 </CardContent>
               </Card>
@@ -119,52 +181,67 @@ export default function CommunitiesPage() {
                 The Simple Journey to Join
               </h2>
               <p className="text-xl text-[#00071B] max-w-3xl mx-auto slide-in-top">
-                Join by word of mouth, receive follow-up about activities, and learn as you work.
+                Join by word of mouth, receive follow-up about activities, and
+                learn as you work.
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <Card className="text-center hover-slide-up card-slide-left">
+              <Card className="text-center hover-slide-up card-slide-left group hover:shadow-2xl hover:scale-105 transition-all duration-500">
                 <CardHeader>
-                  <div className="w-16 h-16 bg-[#1C3163] rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-[#FEFFFF] font-bold text-xl">1</span>
+                  <div className="w-16 h-16 bg-[#1C3163] rounded-full flex items-center justify-center mx-auto mb-4 group-hover:rotate-12 group-hover:scale-110 group-hover:bg-[#D6B585] transition-all duration-500">
+                    <span className="text-[#FEFFFF] font-bold text-xl group-hover:text-[#00071B] group-hover:animate-pulse transition-all duration-300">
+                      1
+                    </span>
                   </div>
-                  <CardTitle className="text-[#1C3163] text-xl">Word of Mouth</CardTitle>
+                  <CardTitle className="text-[#1C3163] text-xl group-hover:text-[#D6B585] transition-colors duration-300">
+                    Word of Mouth
+                  </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-[#00071B] leading-relaxed">
-                    Join through personal connections and recommendations from friends, 
-                    family, or community members who are already part of our groups.
+                  <p className="text-[#00071B] leading-relaxed group-hover:text-[#1C3163] transition-colors duration-300">
+                    Join through personal connections and recommendations from
+                    friends, family, or community members who are already part
+                    of our groups.
                   </p>
                 </CardContent>
               </Card>
 
-              <Card className="text-center hover-slide-up card-slide-top">
+              <Card className="text-center hover-slide-up card-slide-top group hover:shadow-2xl hover:scale-105 transition-all duration-500">
                 <CardHeader>
-                  <div className="w-16 h-16 bg-[#D6B585] rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-[#00071B] font-bold text-xl">2</span>
+                  <div className="w-16 h-16 bg-[#D6B585] rounded-full flex items-center justify-center mx-auto mb-4 group-hover:rotate-12 group-hover:scale-110 group-hover:bg-[#1C3163] transition-all duration-500">
+                    <span className="text-[#00071B] font-bold text-xl group-hover:text-[#FEFFFF] group-hover:animate-bounce transition-all duration-300">
+                      2
+                    </span>
                   </div>
-                  <CardTitle className="text-[#1C3163] text-xl">Follow-up & Activities</CardTitle>
+                  <CardTitle className="text-[#1C3163] text-xl group-hover:text-[#D6B585] transition-colors duration-300">
+                    Follow-up & Activities
+                  </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-[#00071B] leading-relaxed">
-                    Receive personalized follow-up about upcoming activities and opportunities 
-                    that match your interests and availability.
+                  <p className="text-[#00071B] leading-relaxed group-hover:text-[#1C3163] transition-colors duration-300">
+                    Receive personalized follow-up about upcoming activities and
+                    opportunities that match your interests and availability.
                   </p>
                 </CardContent>
               </Card>
 
-              <Card className="text-center hover-slide-up card-slide-right">
+              <Card className="text-center hover-slide-up card-slide-right group hover:shadow-2xl hover:scale-105 transition-all duration-500">
                 <CardHeader>
-                  <div className="w-16 h-16 bg-[#1C3163] rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-[#FEFFFF] font-bold text-xl">3</span>
+                  <div className="w-16 h-16 bg-[#1C3163] rounded-full flex items-center justify-center mx-auto mb-4 group-hover:rotate-12 group-hover:scale-110 group-hover:bg-[#D6B585] transition-all duration-500">
+                    <span className="text-[#FEFFFF] font-bold text-xl group-hover:text-[#00071B] group-hover:animate-pulse transition-all duration-300">
+                      3
+                    </span>
                   </div>
-                  <CardTitle className="text-[#1C3163] text-xl">Train as You Work</CardTitle>
+                  <CardTitle className="text-[#1C3163] text-xl group-hover:text-[#D6B585] transition-colors duration-300">
+                    Train as You Work
+                  </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-[#00071B] leading-relaxed">
-                    Learn leadership and organizational skills through hands-on experience, 
-                    growing your confidence as you contribute to the community.
+                  <p className="text-[#00071B] leading-relaxed group-hover:text-[#1C3163] transition-colors duration-300">
+                    Learn leadership and organizational skills through hands-on
+                    experience, growing your confidence as you contribute to the
+                    community.
                   </p>
                 </CardContent>
               </Card>
@@ -180,7 +257,8 @@ export default function CommunitiesPage() {
                 How Our Groups Work
               </h2>
               <p className="text-xl text-[#00071B] max-w-3xl mx-auto slide-in-top">
-                I facilitate, seasoned participants lead specific topics, creating a supportive learning environment.
+                I facilitate, seasoned participants lead specific topics,
+                creating a supportive learning environment.
               </p>
             </div>
 
@@ -192,25 +270,37 @@ export default function CommunitiesPage() {
                 <div className="space-y-4">
                   <div className="flex items-start gap-3">
                     <CheckCircle className="h-6 w-6 text-[#1C3163] mt-1 flex-shrink-0" />
-                    <p className="text-[#00071B] text-lg">I facilitate the overall group dynamics and ensure everyone feels welcome</p>
+                    <p className="text-[#00071B] text-lg">
+                      I facilitate the overall group dynamics and ensure
+                      everyone feels welcome
+                    </p>
                   </div>
                   <div className="flex items-start gap-3">
                     <CheckCircle className="h-6 w-6 text-[#1C3163] mt-1 flex-shrink-0" />
-                    <p className="text-[#00071B] text-lg">Seasoned participants lead specific topics based on their expertise</p>
+                    <p className="text-[#00071B] text-lg">
+                      Seasoned participants lead specific topics based on their
+                      expertise
+                    </p>
                   </div>
                   <div className="flex items-start gap-3">
                     <CheckCircle className="h-6 w-6 text-[#1C3163] mt-1 flex-shrink-0" />
-                    <p className="text-[#00071B] text-lg">Everyone has the opportunity to share and learn from others</p>
+                    <p className="text-[#00071B] text-lg">
+                      Everyone has the opportunity to share and learn from
+                      others
+                    </p>
                   </div>
                 </div>
               </div>
 
               <div className="slide-in-right">
                 <div className="bg-[#1C3163] p-8 rounded-2xl text-[#FEFFFF]">
-                  <h4 className="font-serif text-2xl font-bold mb-4">Welcoming Icebreaker</h4>
+                  <h4 className="font-serif text-2xl font-bold mb-4">
+                    Welcoming Icebreaker
+                  </h4>
                   <p className="text-lg leading-relaxed mb-6">
-                    Every meeting begins with a warm welcome and an icebreaker activity 
-                    designed to help everyone feel comfortable and connected.
+                    Every meeting begins with a warm welcome and an icebreaker
+                    activity designed to help everyone feel comfortable and
+                    connected.
                   </p>
                   <div className="space-y-3">
                     <div className="flex items-center gap-3">
@@ -245,72 +335,85 @@ export default function CommunitiesPage() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
-              <Card className="text-center hover-slide-up card-slide-left bg-[#1C3163] border-[#D6B585]">
+              <Card className="text-center hover-slide-up card-slide-left group hover:shadow-2xl hover:scale-105 transition-all duration-500 bg-[#1C3163] border-[#D6B585]">
                 <CardHeader>
-                  <div className="w-16 h-16 bg-[#D6B585] rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Heart className="h-8 w-8 text-[#00071B]" />
+                  <div className="w-16 h-16 bg-[#D6B585] rounded-full flex items-center justify-center mx-auto mb-4 group-hover:rotate-12 group-hover:scale-110 group-hover:bg-[#FEFFFF] transition-all duration-500">
+                    <Heart className="h-8 w-8 text-[#00071B] group-hover:text-[#1C3163] group-hover:animate-pulse transition-all duration-300" />
                   </div>
-                  <CardTitle className="text-[#FEFFFF] text-lg">Acceptance</CardTitle>
+                  <CardTitle className="text-[#FEFFFF] text-lg group-hover:text-[#D6B585] transition-colors duration-300">
+                    Acceptance
+                  </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-[#FEFFFF] text-sm leading-relaxed">
-                    Welcoming everyone exactly as they are, without judgment or expectation.
+                  <p className="text-[#FEFFFF] text-sm leading-relaxed group-hover:text-[#FEFFFF] transition-colors duration-300">
+                    Welcoming everyone exactly as they are, without judgment or
+                    expectation.
                   </p>
                 </CardContent>
               </Card>
 
-              <Card className="text-center hover-slide-up card-slide-top bg-[#1C3163] border-[#D6B585]">
+              <Card className="text-center hover-slide-up card-slide-top group hover:shadow-2xl hover:scale-105 transition-all duration-500 bg-[#1C3163] border-[#D6B585]">
                 <CardHeader>
-                  <div className="w-16 h-16 bg-[#D6B585] rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Users className="h-8 w-8 text-[#00071B]" />
+                  <div className="w-16 h-16 bg-[#D6B585] rounded-full flex items-center justify-center mx-auto mb-4 group-hover:rotate-12 group-hover:scale-110 group-hover:bg-[#FEFFFF] transition-all duration-500">
+                    <Users className="h-8 w-8 text-[#00071B] group-hover:text-[#1C3163] group-hover:animate-bounce transition-all duration-300" />
                   </div>
-                  <CardTitle className="text-[#FEFFFF] text-lg">Respect & Love</CardTitle>
+                  <CardTitle className="text-[#FEFFFF] text-lg group-hover:text-[#D6B585] transition-colors duration-300">
+                    Respect & Love
+                  </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-[#FEFFFF] text-sm leading-relaxed">
-                    Treating each other with dignity and care in all our interactions.
+                  <p className="text-[#FEFFFF] text-sm leading-relaxed group-hover:text-[#FEFFFF] transition-colors duration-300">
+                    Treating each other with dignity and care in all our
+                    interactions.
                   </p>
                 </CardContent>
               </Card>
 
-              <Card className="text-center hover-slide-up card-slide-top bg-[#1C3163] border-[#D6B585]">
+              <Card className="text-center hover-slide-up card-slide-top group hover:shadow-2xl hover:scale-105 transition-all duration-500 bg-[#1C3163] border-[#D6B585]">
                 <CardHeader>
-                  <div className="w-16 h-16 bg-[#D6B585] rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Heart className="h-8 w-8 text-[#00071B]" />
+                  <div className="w-16 h-16 bg-[#D6B585] rounded-full flex items-center justify-center mx-auto mb-4 group-hover:rotate-12 group-hover:scale-110 group-hover:bg-[#FEFFFF] transition-all duration-500">
+                    <Heart className="h-8 w-8 text-[#00071B] group-hover:text-[#1C3163] group-hover:animate-pulse transition-all duration-300" />
                   </div>
-                  <CardTitle className="text-[#FEFFFF] text-lg">Giving Hope</CardTitle>
+                  <CardTitle className="text-[#FEFFFF] text-lg group-hover:text-[#D6B585] transition-colors duration-300">
+                    Giving Hope
+                  </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-[#FEFFFF] text-sm leading-relaxed">
+                  <p className="text-[#FEFFFF] text-sm leading-relaxed group-hover:text-[#FEFFFF] transition-colors duration-300">
                     Inspiring optimism and possibility for the future.
                   </p>
                 </CardContent>
               </Card>
 
-              <Card className="text-center hover-slide-up card-slide-top bg-[#1C3163] border-[#D6B585]">
+              <Card className="text-center hover-slide-up card-slide-top group hover:shadow-2xl hover:scale-105 transition-all duration-500 bg-[#1C3163] border-[#D6B585]">
                 <CardHeader>
-                  <div className="w-16 h-16 bg-[#D6B585] rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Users className="h-8 w-8 text-[#00071B]" />
+                  <div className="w-16 h-16 bg-[#D6B585] rounded-full flex items-center justify-center mx-auto mb-4 group-hover:rotate-12 group-hover:scale-110 group-hover:bg-[#FEFFFF] transition-all duration-500">
+                    <Users className="h-8 w-8 text-[#00071B] group-hover:text-[#1C3163] group-hover:animate-bounce transition-all duration-300" />
                   </div>
-                  <CardTitle className="text-[#FEFFFF] text-lg">Building Confidence</CardTitle>
+                  <CardTitle className="text-[#FEFFFF] text-lg group-hover:text-[#D6B585] transition-colors duration-300">
+                    Building Confidence
+                  </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-[#FEFFFF] text-sm leading-relaxed">
+                  <p className="text-[#FEFFFF] text-sm leading-relaxed group-hover:text-[#FEFFFF] transition-colors duration-300">
                     Helping each other develop skills and self-assurance.
                   </p>
                 </CardContent>
               </Card>
 
-              <Card className="text-center hover-slide-up card-slide-right bg-[#1C3163] border-[#D6B585]">
+              <Card className="text-center hover-slide-up card-slide-right group hover:shadow-2xl hover:scale-105 transition-all duration-500 bg-[#1C3163] border-[#D6B585]">
                 <CardHeader>
-                  <div className="w-16 h-16 bg-[#D6B585] rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Heart className="h-8 w-8 text-[#00071B]" />
+                  <div className="w-16 h-16 bg-[#D6B585] rounded-full flex items-center justify-center mx-auto mb-4 group-hover:rotate-12 group-hover:scale-110 group-hover:bg-[#FEFFFF] transition-all duration-500">
+                    <Heart className="h-8 w-8 text-[#00071B] group-hover:text-[#1C3163] group-hover:animate-pulse transition-all duration-300" />
                   </div>
-                  <CardTitle className="text-[#FEFFFF] text-lg">Celebrating Results</CardTitle>
+                  <CardTitle className="text-[#FEFFFF] text-lg group-hover:text-[#D6B585] transition-colors duration-300">
+                    Celebrating Results
+                  </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-[#FEFFFF] text-sm leading-relaxed">
-                    Acknowledging and celebrating each other's achievements and growth.
+                  <p className="text-[#FEFFFF] text-sm leading-relaxed group-hover:text-[#FEFFFF] transition-colors duration-300">
+                    Acknowledging and celebrating each other's achievements and
+                    growth.
                   </p>
                 </CardContent>
               </Card>
@@ -325,13 +428,14 @@ export default function CommunitiesPage() {
               Ready to Join a Group?
             </h2>
             <p className="text-xl text-[#00071B] mb-8 max-w-3xl mx-auto slide-in-top">
-              Start your journey today and discover the power of community support and connection.
+              Start your journey today and discover the power of community
+              support and connection.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center slide-in-bottom">
               <Button
                 asChild
                 size="lg"
-                className="bg-[#1C3163] hover:bg-[#D6B585] text-[#FEFFFF] hover:text-[#00071B] shadow-xl hover:shadow-2xl transition-all text-lg px-8 py-4 btn-hover hover-glow font-semibold"
+                className="bg-[#1C3163] hover:bg-[#1C3163]/90 text-[#FEFFFF] hover:text-[#FEFFFF] shadow-xl hover:shadow-2xl transition-all text-lg px-8 py-4 btn-hover hover-glow font-semibold focus:ring-4 focus:ring-[#1C3163]/30 focus:outline-none hover:scale-105"
               >
                 <Link href="#contact">
                   Get Started Today
@@ -342,7 +446,7 @@ export default function CommunitiesPage() {
                 asChild
                 size="lg"
                 variant="outline"
-                className="border-2 border-[#1C3163] text-[#1C3163] hover:bg-[#1C3163] hover:text-[#FEFFFF] shadow-xl hover:shadow-2xl transition-all text-lg px-8 py-4 font-semibold"
+                className="border-2 border-[#1C3163] text-[#1C3163] hover:bg-[#1C3163] hover:text-[#FEFFFF] shadow-xl hover:shadow-2xl transition-all text-lg px-8 py-4 font-semibold hover:scale-105"
               >
                 <Link href="#contact">
                   <Phone className="mr-2 h-5 w-5" />
@@ -354,5 +458,5 @@ export default function CommunitiesPage() {
         </section>
       </div>
     </AnimationWrapper>
-  )
+  );
 }

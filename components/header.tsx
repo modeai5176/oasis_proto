@@ -1,12 +1,12 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import Link from "next/link"
-import { Menu, X } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { useState } from "react";
+import Link from "next/link";
+import { Menu, X } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navigation = [
     { name: "HOME", href: "/" },
@@ -15,14 +15,18 @@ export function Header() {
     { name: "STORIES & IMPACT", href: "/projects" },
     { name: "DONATE", href: "/contribute" },
     { name: "CONTACT", href: "/contact" },
-  ]
+  ];
 
   return (
-    <header 
-      className="fixed top-0 left-0 right-0 z-50 bg-[#00071B] transition-all duration-300" 
+    <header
+      className="fixed top-0 left-0 right-0 z-50 bg-[#00071B] transition-all duration-300"
       role="banner"
     >
-      <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8" role="navigation" aria-label="Main navigation">
+      <nav
+        className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"
+        role="navigation"
+        aria-label="Main navigation"
+      >
         <div className="flex justify-between items-center h-20">
           {/* Section 1: Logo/Branding */}
           <Link href="/" className="flex items-center gap-3 group">
@@ -30,8 +34,12 @@ export function Header() {
               <span className="text-[#FEFFFF] font-bold text-lg">O</span>
             </div>
             <div className="flex flex-col">
-              <span className="font-semibold text-lg text-[#FEFFFF] tracking-tight">Oasis & Mirage</span>
-              <span className="text-xs text-[#D6B585] -mt-0.5">From mirage to community</span>
+              <span className="font-semibold text-lg text-[#FEFFFF] tracking-tight">
+                Oasis & Mirage
+              </span>
+              <span className="text-xs text-[#D6B585] -mt-0.5">
+                From mirage to community
+              </span>
             </div>
           </Link>
 
@@ -53,7 +61,7 @@ export function Header() {
           <div className="hidden lg:flex items-center">
             <Button
               asChild
-              className="bg-[#1C3163] hover:bg-[#1C3163]/90 text-[#FEFFFF] px-8 py-3 rounded-full font-medium shadow-lg hover:shadow-xl transition-all duration-300 text-base"
+              className="bg-[#1C3163] hover:bg-[#1C3163]/90 text-[#FEFFFF] shadow-xl hover:shadow-2xl transition-all text-base px-8 py-3 rounded-full font-semibold btn-hover hover-glow focus:ring-4 focus:ring-[#1C3163]/30 focus:outline-none"
             >
               <Link href="/contribute">Donate Now</Link>
             </Button>
@@ -68,7 +76,11 @@ export function Header() {
               aria-label="Toggle menu"
               className="p-2 hover:bg-[#D6B585]/20 rounded-full text-[#D6B585]"
             >
-              {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+              {isMenuOpen ? (
+                <X className="h-5 w-5" />
+              ) : (
+                <Menu className="h-5 w-5" />
+              )}
             </Button>
           </div>
         </div>
@@ -89,7 +101,7 @@ export function Header() {
               ))}
               <Button
                 asChild
-                className="bg-[#1C3163] hover:bg-[#1C3163]/90 text-[#FEFFFF] w-fit mt-2 px-6 py-2 rounded-full font-medium shadow-lg"
+                className="bg-[#1C3163] hover:bg-[#1C3163]/90 text-[#FEFFFF] shadow-xl hover:shadow-2xl transition-all text-base w-fit mt-2 px-6 py-2 rounded-full font-semibold btn-hover hover-glow focus:ring-4 focus:ring-[#1C3163]/30 focus:outline-none"
               >
                 <Link href="/contribute">Donate Now</Link>
               </Button>
@@ -98,5 +110,5 @@ export function Header() {
         )}
       </nav>
     </header>
-  )
+  );
 }
