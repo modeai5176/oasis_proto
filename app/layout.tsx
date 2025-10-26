@@ -16,7 +16,7 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Oasis & Mirage - From Mirage to Community",
+  title: "Oasis & Mirage - Beyond the Known Horizon",
   description:
     "Strengthening communities by fostering connection, resilience, and shared growth. We create spaces of refuge and renewal where individuals come together to support one another, access resources, and transform challenges into opportunities.",
   keywords:
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "Oasis & Mirage - From Mirage to Community",
+    title: "Oasis & Mirage - Beyond the Known Horizon",
     description:
       "Strengthening communities by fostering connection, resilience, and shared growth.",
     url: "https://oasismirage.org",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Oasis & Mirage - From Mirage to Community",
+    title: "Oasis & Mirage - Beyond the Known Horizon",
     description:
       "Strengthening communities by fostering connection, resilience, and shared growth.",
   },

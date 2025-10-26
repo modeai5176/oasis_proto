@@ -38,7 +38,7 @@ export function Header() {
                 Oasis & Mirage
               </span>
               <span className="text-xs text-[#D6B585] -mt-0.5">
-                From mirage to community
+                Beyond the known horizon
               </span>
             </div>
           </Link>
